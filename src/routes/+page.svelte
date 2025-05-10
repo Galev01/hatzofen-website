@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>הצופן - משחק חידות מילים בעברית</title>
+	<title>הצופן - פאזל עברי</title>
 	<meta name="description" content="גלו את הקסם של המילה העברית עם 'הצופן' - משחק חידות ממכר המשלב אתגר, ידע וכיף בעולם הציטוטים העבריים." />
 </svelte:head>
 

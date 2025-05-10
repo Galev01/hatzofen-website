@@ -13,7 +13,7 @@
 		
 		<div class="max-w-2xl mx-auto text-center mb-10 md:mb-16">
 			<p class="text-lg text-brand-text-light opacity-90 leading-relaxed">
-				"הצופן" הוא משחק חידות מילים בעברית שבו כל אות מוחלפת במספר ייחודי. המטרה שלכם היא לפענח את הציטוט המסתתר מאחורי המספרים, בעזרת היגיון, ידע בשפה העברית ומקלדת דינמית במשחק.
+				"הצופן" הוא פאזל קריפטוגרפי בעברית שבו כל אות מוחלפת במספר ייחודי. המטרה שלכם היא לפענח את הציטוט המסתתר מאחורי המספרים, בעזרת היגיון, וידע בשפה העברית.
 			</p>
 		</div>
 
@@ -21,7 +21,6 @@
 			<!-- Step 1 -->
 			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
 				{#if browser}
-					 Männer<!-- @ts-ignore -->
 					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
 						<LottieModule.LottiePlayer 
 							src="/lotties/Question Mark.json"
@@ -38,13 +37,12 @@
 				{/if}
 				<h3 class="text-xl font-semibold text-brand-primary mb-2">1. בחרו קטגוריה וחידה</h3>
 				<p class="text-brand-text-light opacity-80 text-sm leading-relaxed">
-					בחרו מתוך מאות חידות בקטגוריות מגוונות כמו חוכמה, תנ"ך, הומור ועוד.
+					בחרו מתוך מאות חידות בקטגוריות מגוונות כמו יהדות, ספורט, שירה עברית ועוד...
 				</p>
 			</div>
 			<!-- Step 2 -->
 			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
 				{#if browser}
-					 Männer<!-- @ts-ignore -->
 					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
 						<LottieModule.LottiePlayer 
 							src="/lotties/Binary.json"
@@ -67,7 +65,6 @@
 			<!-- Step 3 -->
 			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
 				{#if browser}
-					 Männer<!-- @ts-ignore -->
 					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
 						<LottieModule.LottiePlayer 
 							src="/lotties/Puzzle-Solving Teamwork.json"
@@ -84,7 +81,7 @@
 				{/if}
 				<h3 class="text-xl font-semibold text-brand-primary mb-2">3. גלו את הציטוט המלא</h3>
 				<p class="text-brand-text-light opacity-80 text-sm leading-relaxed">
-					פתרו את החידה במלואה, צברו נקודות והתקדמו לאתגר הבא!
+					פתרו את החידה במלואה, צברו מטבעות והתקדמו לאתגר הבא!
 				</p>
 			</div>
 		</div>

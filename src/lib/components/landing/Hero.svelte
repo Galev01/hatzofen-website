@@ -38,10 +38,10 @@
 						class="h-80 w-auto mx-auto md:mx-auto mb-6 md:mb-8"
 					/>
 					<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-primary mb-4 md:mb-6">
-						הצופן: פצחו את סודות החוכמה העברית!
+						פאזל ישראלי עברי
 					</h1>
 					<p class="text-lg sm:text-xl text-brand-text-light opacity-90">
-						משחק חידות ממכר המשלב אתגר, ידע וכיף בעולם הציטוטים העבריים.
+						פאזל קריפטוגרפי ממכר המשלב אתגר וידע בשפה העברית
 					</p>
 				</div>
 			</div>

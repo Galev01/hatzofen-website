@@ -15,7 +15,7 @@
 			icon: '/lotties/Data Server.json',
 			alt: 'Rich Content Icon',
 			title: 'מאגר תוכן עשיר',
-			description: 'מאות חידות בקטגוריות מגוונות: חוכמת ישראל, תנ"ך, הומור, פתגמים, שירים ועוד. שעות של הנאה וגילוי.'
+			description: 'מאות חידות בקטגוריות מגוונות: חוכמת ישראל, תנ"ך, הומור, פתגמים, שירים ועוד. '
 		},
 		{
 			icon: '/lotties/Calendar.json',
