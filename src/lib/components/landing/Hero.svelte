@@ -9,7 +9,7 @@
 		<!-- Desktop: 50/50 Split | Mobile: Stacks -->
 		<div class="flex flex-col md:flex-row md:gap-12 lg:gap-16 items-center">
 			<!-- Video Column (Visually Left in RTL on Desktop) -->
-			<div class="md:w-1/2 w-full flex justify-center items-center order-1 md:order-2">
+			<div class="md:w-1/2 w-full hidden md:flex justify-center items-center order-1 md:order-2">
 				<div class="w-full max-w-[400px] sm:max-w-[340px] mx-auto">
 					<div class="iphone-frame relative shadow-2xl shadow-brand-primary/30">
 						<div class="video-wrapper-for-iphone overflow-hidden">

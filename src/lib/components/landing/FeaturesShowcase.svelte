@@ -59,8 +59,8 @@
 								src="{feature.icon}"
 								autoplay
 								loop
-								width="48px" 
-								height="48px"
+								width="{300}" 
+								height="{300}"
 								ariaLabel="{feature.alt}"
 								class="mb-5"
 							/>
