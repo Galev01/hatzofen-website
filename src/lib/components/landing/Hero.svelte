@@ -1,7 +1,7 @@
 <!-- src/lib/components/landing/Hero.svelte -->
 <script lang="ts">
 	// No specific script logic needed for this component yet
-	import { browser } from '$app/environment';
+	// import { browser } from '$app/environment'; // No longer needed as we are using static images
 </script>
 
 <section id="hero" class="py-16 md:py-24">
@@ -13,7 +13,7 @@
 				<div class="w-full max-w-[280px] sm:max-w-[320px] mx-auto">
 					<div class="relative rounded-lg shadow-2xl shadow-brand-primary/30 overflow-hidden" style="padding-top: 177.78%;"> <!-- 9:16 Aspect Ratio -->
 						<video 
-							src="/placeholder-app-video.mp4" 
+							src="videos/tzofen_video.mp4" 
 							autoplay 
 							loop 
 							muted 
@@ -53,48 +53,14 @@
 					class="btn-appstore transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-brand-background rounded-md"
 					aria-label="Download on the App Store"
 				>
-					{#if browser}
-						{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
-							<LottieModule.LottiePlayer
-								src="/lottie/icons/App Store.json"
-								autoplay={true}
-								loop={false}
-								controls={false}
-								width="166px"
-								height="56px"
-								ariaLabel="הורד ב-App Store"
-								renderer="svg"
-								background="transparent"
-								containerClass="h-12 md:h-14"
-							/>
-						{/await}
-					{:else}
-						<img src="/placeholder-appstore-badge-he.png" alt="הורד ב-App Store" class="h-12 md:h-14 mx-auto sm:mx-0">
-					{/if}
+					<img src="/icons/App Store.svg" alt="הורד ב-App Store" class="h-12 md:h-14 mx-auto sm:mx-0">
 				</a>
 				<a 
 					href="#" 
 					class="btn-googleplay transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-brand-background rounded-md"
 					aria-label="Get it on Google Play"
 				>
-					{#if browser}
-						{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
-							<LottieModule.LottiePlayer
-								src="/lottie/icons/Google Play.json"
-								autoplay={true}
-								loop={false}
-								controls={false}
-								width="166px"
-								height="56px"
-								ariaLabel="הורד ב-Google Play"
-								renderer="svg"
-								background="transparent"
-								containerClass="h-12 md:h-14"
-							/>
-						{/await}
-					{:else}
-						<img src="/placeholder-googleplay-badge-he.png" alt="הורד ב-Google Play" class="h-12 md:h-14 mx-auto sm:mx-0">
-					{/if}
+					<img src="/icons/Google Play.svg" alt="הורד ב-Google Play" class="h-12 md:h-14 mx-auto sm:mx-0">
 				</a>
 			</div>
 		</div>
