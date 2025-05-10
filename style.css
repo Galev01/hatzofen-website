@@ -1,0 +1,521 @@
+/* Basic Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+    --color-background: #1A1F2C;
+    --color-primary: #9b87f5;
+    --color-accent: #FDE1D3;
+    --color-text-light: #F0F0F0;
+    --color-text-dark: #333333; /* For light backgrounds if any */
+    /* 
+      Recommended: Choose a professional Hebrew web font that fits the modern aesthetic.
+      Examples: 'Assistant', 'Alef', 'Open Sans Hebrew', 'Rubik'. 
+      Ensure font files are included or linked if using custom fonts.
+    */
+    --font-primary: 'Arial', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --color-primary-rgb: 155, 135, 245; /* RGB values for #9b87f5 */
+    --color-accent-rgb: 253, 225, 211; /* RGB values for #FDE1D3 */
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-background);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    direction: rtl; /* Ensure RTL direction */
+    text-align: right; /* Default text alignment for RTL */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    outline-offset: 2px; /* For better visibility of focus ring */
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    text-decoration: none; /* Often preferred to remove underline on focus-visible if outline is strong */
+}
+
+/* Utility class for visually hidden content (for accessibility) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Basic container for consistent spacing */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.75em;
+    font-weight: 600; /* A bit bolder for headings */
+    line-height: 1.2;
+}
+
+/* Add more global styles as needed */
+
+/* Hero Section Styles */
+.hero-section {
+    padding: 60px 0;
+    background-color: var(--color-background); /* Already set on body, but can be explicit */
+    text-align: center; /* Center content by default, adjust for RTL if needed for specific elements */
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-headline {
+    font-size: 2.8em; /* Placeholder size */
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+}
+
+.hero-subheadline {
+    font-size: 1.2em;
+    color: var(--color-text-light);
+    margin-bottom: 1.5em;
+    opacity: 0.9;
+}
+
+.hero-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-weight: bold;
+    outline-offset: 2px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-accent);
+    box-shadow: 0 0 0 4px rgba(var(--color-accent-rgb, 253, 225, 211), 0.5); /* Accent color with opacity */
+    text-decoration: none;
+}
+
+.btn img {
+    height: 40px; /* Placeholder, adjust based on actual badge images */
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Specific button styling for CTA image badges */
+.btn-appstore img,
+.btn-googleplay img {
+    border-radius: 6px; /* If badges themselves don't have rounded corners */
+}
+
+.btn-appstore:focus-visible img,
+.btn-googleplay:focus-visible img {
+    outline: 3px solid var(--color-accent);
+    box-shadow: 0 0 8px var(--color-accent);
+}
+
+.hero-visual {
+    max-width: 450px; /* Adjust as needed */
+    width: 100%;
+}
+
+.hero-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Optional: if mockup needs rounded corners */
+    /* Add a subtle shadow or glow effect if it fits the design */
+    box-shadow: 0 0 30px -10px var(--color-primary);
+}
+
+/* Responsive adjustments for Hero */
+@media (min-width: 768px) {
+    .hero-section .container {
+        flex-direction: row-reverse; /* For RTL, content on right, visual on left */
+        text-align: right; /* Align text to the right for content block */
+        justify-content: space-between;
+    }
+
+    .hero-content {
+        max-width: 50%;
+        text-align: right;
+    }
+    
+    .hero-cta-buttons {
+        justify-content: flex-start;
+    }
+
+    .hero-visual {
+        max-width: 45%;
+    }
+
+    .hero-headline {
+        font-size: 3.2em;
+    }
+}
+
+/* "What is it? / How to Play?" Section Styles */
+.what-is-it-section {
+    padding: 50px 0;
+    background-color: var(--color-background); /* Or a slightly different shade if desired for separation */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2em;
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+}
+
+.section-title .title-separator {
+    color: var(--color-primary);
+    font-weight: normal;
+    margin: 0 10px;
+}
+
+.explanation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* Center align the paragraph and steps container */
+}
+
+.explanation-text {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    color: var(--color-text-light);
+    opacity: 0.9;
+}
+
+.steps-graphic {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.step {
+    background-color: #2a2f3c; /* Slightly lighter than main bg for card effect */
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid var(--color-primary);
+}
+
+.step-icon {
+    height: 60px; /* Adjust as needed */
+    width: auto;
+    margin-bottom: 15px;
+    /* Basic styling for placeholder, replace with actual SVG styles or image properties */
+    filter: invert(70%) sepia(80%) saturate(500%) hue-rotate(200deg) brightness(100%) contrast(90%); /* Temp filter for placeholder SVGs to give them color */
+}
+
+.step-title {
+    font-size: 1.4em;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.step-description {
+    font-size: 0.95em;
+    color: var(--color-text-light);
+    opacity: 0.85;
+}
+
+/* Responsive adjustments for "What is it?" section */
+@media (min-width: 768px) {
+    .steps-graphic {
+        flex-direction: row; /* Steps side-by-side on larger screens */
+        justify-content: space-between;
+    }
+
+    .step {
+        flex-basis: calc(33.333% - 20px); /* Adjust basis and gap */
+        text-align: right; /* For RTL, align step content to right */
+    }
+
+    .section-title {
+        font-size: 2.5em;
+    }
+}
+
+/* Features Showcase Section Styles */
+.features-section {
+    padding: 50px 0;
+    background-color: var(--color-background); /* Consistent background */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: #2a2f3c; /* Card background */
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center; /* Default center, will adjust for RTL text if icons are beside text */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid var(--color-primary);
+    display: flex;
+    flex-direction: column; /* Stack icon, title, text vertically by default */
+    align-items: center;
+}
+
+.feature-icon {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+    margin-bottom: 15px;
+    /* Using the same placeholder filter as before */
+    filter: invert(70%) sepia(80%) saturate(500%) hue-rotate(200deg) brightness(100%) contrast(90%);
+}
+
+.feature-title {
+    font-size: 1.3em;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: 0.9em;
+    color: var(--color-text-light);
+    opacity: 0.85;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments for Features Grid */
+@media (min-width: 576px) { /* Small devices (tablets in portrait, large phones) */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+    .feature-item {
+        /* If icons are meant to be beside text, adjust here for RTL */
+        /* text-align: right; */ 
+    }
+}
+
+@media (min-width: 992px) { /* Medium devices (tablets in landscape, small desktops) */
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+    }
+}
+
+/* Visual Gallery / Screenshots Section Styles */
+.gallery-section {
+    padding: 50px 0;
+    background-color: #222733; /* Slightly different dark shade for variety */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for smallest screens */
+    gap: 25px;
+}
+
+.gallery-item {
+    background-color: var(--color-background);
+    border-radius: 8px;
+    overflow: hidden; /* To ensure image corners follow border-radius */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    border: 1px solid var(--color-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(var(--color-primary-rgb, 155, 135, 245), 0.3); /* Use primary color for glow */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Common aspect ratio for screenshots, adjust if needed */
+    object-fit: cover; /* Ensures image covers the area, might crop */
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.screenshot-caption {
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--color-text-light);
+    background-color: var(--color-background);
+}
+
+/* Responsive adjustments for Gallery Grid */
+@media (min-width: 576px) { /* Small devices */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) { /* Medium devices */
+    .gallery-grid {
+        /* Showing 3 main screenshots and 2 smaller ones, or just a 3-column layout */
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Example: if we want the 5th item (optional) to span or be styled differently */
+    .gallery-item-optional {
+        /* grid-column: span 1; */ /* Default behavior */
+    }
+}
+
+/* If we expect more than 3 prominent screenshots, a 4th column could be added for larger screens */
+@media (min-width: 1200px) { /* Large devices */
+    .gallery-grid {
+        /* Could go to 4 columns if many high-quality screenshots are available */
+        /* grid-template-columns: repeat(4, 1fr); */
+    }
+}
+
+/* "Discover a World of Wisdom and Fun" Section Styles */
+.discover-section {
+    padding: 50px 0;
+    background-color: var(--color-background); /* Or a slightly different shade for variety */
+}
+
+.discover-content {
+    max-width: 750px; /* Adjust for optimal line length */
+    margin: 0 auto;
+    text-align: center; /* Center the text block */
+}
+
+.discover-content p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: var(--color-text-light);
+    opacity: 0.9;
+    margin-bottom: 1.5em;
+}
+
+.discover-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments if any particular are needed, but usually text flow is enough */
+@media (min-width: 768px) {
+    .discover-content p {
+        font-size: 1.2em;
+    }
+    .discover-section .section-title {
+        font-size: 2.5em; /* Consistent with other sections */
+    }
+}
+
+/* Footer Section Styles */
+.page-footer-section {
+    padding: 40px 0 20px;
+    background-color: #131722; /* Darker shade for footer */
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-title {
+    font-size: 1.8em;
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+}
+
+.footer-subtitle {
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+    opacity: 0.9;
+}
+
+.footer-cta-buttons {
+    margin-bottom: 25px;
+}
+
+.footer-nav {
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    color: var(--color-text-light);
+    font-size: 0.9em;
+    margin: 0 8px;
+    opacity: 0.8;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    color: var(--color-accent);
+    opacity: 1;
+    text-decoration: none;
+}
+
+.footer-link-separator {
+    color: var(--color-text-light);
+    opacity: 0.5;
+}
+
+.footer-copyright {
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+/* Responsive adjustments for Footer, if needed */
+@media (min-width: 768px) {
+    .footer-title {
+        font-size: 2em;
+    }
+} 

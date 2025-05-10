@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom filter to color SVG to brand-primary. 
+   This is a placeholder approach for placeholder SVGs. 
+   For real SVGs, it's better to use `fill="currentColor"` and set text color, 
+   or use CSS masks, or inline the SVG for direct style manipulation.
+*/
+.filter-brand-primary {
+	filter: brightness(0) saturate(100%) invert(62%) sepia(43%) saturate(5436%) hue-rotate(227deg) brightness(98%) contrast(97%);
+	/* This filter attempts to match #9b87f5 (brand-primary) */
+}
