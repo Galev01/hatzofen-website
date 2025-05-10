@@ -5,7 +5,7 @@
 	// No specific script logic needed yet
 </script>
 
-<section id="what-is-it" class="py-12 md:py-20 bg-brand-background">
+<section id="what-is-it" class="py-12 md:py-20 bg-slate-900">
 	<div class="container mx-auto px-4">
 		<h2 class="text-3xl md:text-4xl font-bold text-center text-brand-text-light mb-10 md:mb-16">
 			מה זה הצופן? <span class="text-brand-primary">|</span> איך משחקים?
@@ -21,6 +21,7 @@
 			<!-- Step 1 -->
 			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
 				{#if browser}
+					 Männer<!-- @ts-ignore -->
 					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
 						<LottieModule.LottiePlayer 
 							src="/lotties/Question Mark.json"
@@ -43,6 +44,7 @@
 			<!-- Step 2 -->
 			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
 				{#if browser}
+					 Männer<!-- @ts-ignore -->
 					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
 						<LottieModule.LottiePlayer 
 							src="/lotties/Binary.json"
@@ -65,6 +67,7 @@
 			<!-- Step 3 -->
 			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
 				{#if browser}
+					 Männer<!-- @ts-ignore -->
 					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
 						<LottieModule.LottiePlayer 
 							src="/lotties/Puzzle-Solving Teamwork.json"
