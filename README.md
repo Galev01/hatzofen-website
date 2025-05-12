@@ -1,38 +1,78 @@
-# sv
+# הצופן - אתר נחיתה
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+ברוכים הבאים למאגר הקוד של אתר הנחיתה עבור משחק הפאזל העברי "הצופן".
 
-## Creating a project
+## אודות הפרויקט
 
-If you're seeing this, you've probably already done this step. Congrats!
+אתר זה נועד לשמש כאתר נחיתה רשמי עבור האפליקציה "הצופן". מטרתו העיקרית היא:
+- להציג את המשחק לקהל הרחב.
+- להסביר כיצד משחקים.
+- להדגיש את התכונות המרכזיות והייחודיות של המשחק.
+- לכלול גלריה ויזואלית של ממשק המשתמש.
+- להניע משתמשים פוטנציאליים להוריד את האפליקציה מחנויות האפליקציות (כשיהיה זמין).
+- לספק קישורים למדיניות הפרטיות ותנאי השימוש.
 
-```bash
-# create a new project in the current directory
-npx sv create
+האתר מעוצב בדגש על עברית (RTL) ורספונסיביות מלאה.
 
-# create a new project in my-app
-npx sv create my-app
-```
+## טכנולוגיות
 
-## Developing
+הפרויקט נבנה באמצעות:
+- **SvelteKit**: Framework לבניית אפליקציות ווב עם Svelte, מספק פתרון יעיל לבניית אתרים סטטיים (כמו אתר זה).
+- **Tailwind CSS**: Utility-first CSS framework, מאפשר בנייה מהירה ורספונסיבית של הממשק.
+- **Tailwind CSS RTL**: Plugin להבטחת תמיכה מלאה בכיווניות ימין-לשמאל (RTL) עבור עיצוב עברי.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## הגדרה והפעלה מקומית
 
-```bash
-npm run dev
+כדי להפעיל את הפרויקט על המחשב המקומי שלכם:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+1.  שכפלו את המאגר:
+    ```bash
+    git clone <כתובת המאגר כאן>
+    cd hatzofen-website
+    ```
+2.  התקינו את התלויות:
+    ```bash
+    npm install
+    ```
+3.  הפעילו את סביבת הפיתוח:
+    ```bash
+    npm run dev
+    ```
+    האתר יהיה זמין בכתובת [http://localhost:5173/](http://localhost:5173/) (או פורט אחר אם 5173 תפוס).
 
-## Building
+## בניית האתר (Static Build)
 
-To create a production version of your app:
+הפרויקט מוגדר להיבנות כאתר סטטי שמתאים לפריסה על שירותי אירוח סטטיים כמו GitHub Pages (כפי שהוגדר בקובץ `svelte.config.js`).
 
+כדי לבנות את האתר לגרסת פרודקשן:
 ```bash
 npm run build
 ```
+הקובץ הבנויים יישמרו בתיקיית `docs` בשורש הפרויקט.
 
-You can preview the production build with `npm run preview`.
+## פריסה (Deployment)
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+פרויקט זה מוגדר לפריסה כאתר סטטי ל-GitHub Pages. הגדרות אלו נמצאות בקובץ `svelte.config.js`, המשתמש ב-`@sveltejs/adapter-static` ומוגדר לשמור את קבצי הפלט בתיקיית `docs`.
+
+להגדרת GitHub Pages למאגר זה:
+1.  כנסו להגדרות המאגר ב-GitHub.
+2.  עברו ללשונית "Pages".
+3.  תחת "Build and deployment", בחרו ב- "Deploy from a branch".
+4.  בחרו ב-`gh-pages` branch (או `main`/`master` אם אתם פורסים ישירות משם) ובתיקייה `/docs`.
+5.  לחצו "Save".
+
+GitHub Actions יכול לשמש גם לאוטומציה של תהליך הבנייה והפריסה בכל Push לענף הראשי.
+
+## אודות האפליקציה "הצופן"
+
+"הצופן" הוא משחק פאזל קריפטוגרפי ייחודי בעברית, המשלב אתגר, ידע בשפה וכיף. כל אות בציטוט מוחלפת במספר, והמטרה היא לפענח את הצופן ולחשוף את הציטוט המלא. המשחק כולל מאות חידות במגוון קטגוריות, אתגר יומי, רמות קושי ומערכת רמזים חכמה.
+
+האפליקציה תהיה זמינה בקרוב בחנויות האפליקציות.
+
+## יצירת קשר
+
+לשאלות או מידע נוסף, ניתן לפנות לכתובת הדוא"ל: hatzofen.haivri@gmail.com
+
+---
+
+© 2025 כל הזכויות שמורות ל"הצופן".
