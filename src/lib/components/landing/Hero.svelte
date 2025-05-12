@@ -52,14 +52,14 @@
 		<div class="mt-12 md:mt-16">
 			<div class="hero-cta-buttons flex flex-col sm:flex-row justify-center items-center gap-4">
 				<a 
-					href="#" 
+					href="/" 
 					class="btn-appstore transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-brand-background rounded-md"
 					aria-label="Download on the App Store"
 				>
 					<img src="/icons/App Store.svg" alt="הורד ב-App Store" class="h-12 md:h-14 mx-auto sm:mx-0">
 				</a>
 				<a 
-					href="#" 
+					href="/" 
 					class="btn-googleplay transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-brand-background rounded-md"
 					aria-label="Get it on Google Play"
 				>

@@ -16,14 +16,14 @@
 
 			<div class="footer-cta-buttons flex flex-col sm:flex-row justify-center items-center gap-4 mb-10">
 				<a 
-					href="#" 
+					href="/" 
 					class="btn-appstore transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md"
 					aria-label="Download on the App Store"
 				>
 					<img src="/icons/App Store.svg" alt="הורד ב-App Store" class="h-12 md:h-14">
 				</a>
 				<a 
-					href="#" 
+					href="/" 
 					class="btn-googleplay transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md"
 					aria-label="Get it on Google Play"
 				>
@@ -39,6 +39,7 @@
 				<a href="/terms-of-use" class="text-sm text-brand-text-light opacity-70 hover:opacity-100 hover:text-brand-accent transition mx-2">
 					תנאי שימוש
 				</a>
+				
 				<!-- Optional: Social media links, contact email can be added here -->
 			</nav>
 
