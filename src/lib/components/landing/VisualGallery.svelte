@@ -3,27 +3,27 @@
 	// No specific script logic needed yet
 	const galleryItems = [
 		{
-			src: 'tzofen/homescreen.png',
+			src: 'tzofen/homescreen.jpg',
 			alt: 'App HomeScreen Screenshot',
 			caption: 'מסך הבית הראשי'
 		},
 		{
-			src: 'tzofen/catscreen.png',
+			src: 'tzofen/catscreen.jpg',
 			alt: 'App CategorySelectScreen Screenshot',
 			caption: 'בחירת קטגוריה וחידה'
 		},
 		{
-			src: 'tzofen/puzscreen.png',
+			src: 'tzofen/puzscreen.jpg',
 			alt: 'App PuzzleScreen Screenshot',
 			caption: 'מסך החידה בפעולה'
 		},
 		{
-			src: 'tzofen/solvedscreen.png',
+			src: 'tzofen/solvedscreen.jpg',
 			alt: 'App PuzzleSolvedScreen Screenshot',
 			caption: 'חידה פתורה וציטוט חשוף'
 		},
 		{
-			src: 'tzofen/hintscreen.png',
+			src: 'tzofen/hintscreen.jpg',
 			alt: 'App HintsModal Screenshot',
 			caption: 'אפשרויות רמזים'
 		}
