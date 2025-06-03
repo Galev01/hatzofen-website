@@ -186,3 +186,22 @@ Waiting for user's next instructions.
 -   **Contact Us Plan Step 1: Create Contact Us Page** completed. Implemented comprehensive contact page with email, LinkedIn, and contact form that opens user's email client.
 -   **Contact Us Plan Step 2: Update Footer Navigation** completed. Added contact link to footer.
 -   **Contact Us Plan Step 3: Create Documentation** completed. Added comprehensive documentation for the contact page.
+
+## Plan: FAQ Section
+
+1.  **Create FAQ Component (`src/lib/components/landing/FAQ.svelte`)**: COMPLETED
+    *   Created animated dropdown FAQ component with 7 comprehensive questions and answers
+    *   Implemented smooth expand/collapse animations with CSS transitions
+    *   Only one FAQ item can be open at a time (accordion behavior)
+    *   RTL-first design with proper Hebrew text alignment
+    *   Responsive design with hover effects and focus states
+    *   Questions cover gameplay, difficulty levels, content types, age appropriateness, hints system, pricing, and support
+
+2.  **Integrate FAQ into Main Page (`src/routes/+page.svelte`)**: COMPLETED
+    *   Added FAQ component import
+    *   Positioned FAQ section after DiscoverSection in the page flow
+    *   Maintains consistent page structure and styling
+
+## Log
+-   **FAQ Section Plan Step 1: Create FAQ Component** completed. Implemented animated dropdown FAQ with 7 questions covering all aspects of the game.
+-   **FAQ Section Plan Step 2: Integrate FAQ into Main Page** completed. Added FAQ section after the Discover section.

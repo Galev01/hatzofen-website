@@ -4,6 +4,7 @@
 	import FeaturesShowcase from '$lib/components/landing/FeaturesShowcase.svelte';
 	import VisualGallery from '$lib/components/landing/VisualGallery.svelte';
 	import DiscoverSection from '$lib/components/landing/DiscoverSection.svelte';
+	import FAQ from '$lib/components/landing/FAQ.svelte';
 	import PageFooter from '$lib/components/landing/PageFooter.svelte';
 </script>
 
@@ -18,6 +19,7 @@
 	<FeaturesShowcase />
 	<VisualGallery />
 	<DiscoverSection />
+	<FAQ />
 </main>
 
 <PageFooter />
