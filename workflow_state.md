@@ -146,6 +146,29 @@ Waiting for user's next instructions.
         *   Ensure CTA buttons are centered within this new container.
     *   Adjust flex order and stacking for mobile vs. desktop views to maintain good flow (e.g., video first on mobile, then text, then buttons).
 
+## Plan: Contact Us Page
+
+1.  **Create Contact Us Page (`src/routes/contact-us/+page.svelte`)**: COMPLETED
+    *   Created comprehensive contact page with multiple contact methods
+    *   Email contact section with direct mailto link to `hatzofen.haivri@gmail.com`
+    *   LinkedIn profile section (placeholder URL)
+    *   Full-featured contact form with validation
+    *   Form submission opens user's email client with pre-filled data
+    *   FAQ section with common questions
+    *   Responsive design with RTL support
+    *   Proper SEO optimization with title and meta description
+
+2.  **Update Footer Navigation (`src/lib/components/landing/PageFooter.svelte`)**: COMPLETED
+    *   Added "צור קשר" (Contact Us) link to footer navigation
+    *   Link positioned first in the navigation menu
+    *   Consistent styling with other footer links
+
+3.  **Create Documentation (`docs/contact-us-page.md`)**: COMPLETED
+    *   Comprehensive documentation of contact page features
+    *   Technical implementation details
+    *   Customization notes and future enhancement suggestions
+    *   Integration points and maintenance guidelines
+
 ## Log
 -   **Plan (SvelteKit & Tailwind) Step 10: Footer Component Implementation** was completed.
 -   **Legal Pages Plan Step 1: Create Privacy Policy Page** completed.
@@ -160,3 +183,6 @@ Waiting for user's next instructions.
 -   **Visual Enhancements Plan Step 7: Integrate Lottie Animations for Store Badges in `Hero.svelte`** completed.
 -   **Visual Enhancements Plan Step 8: Add App Logo to Hero Section** completed.
 -   **Visual Enhancements Plan Step 9: Refactor Hero Section Layout** completed.
+-   **Contact Us Plan Step 1: Create Contact Us Page** completed. Implemented comprehensive contact page with email, LinkedIn, and contact form that opens user's email client.
+-   **Contact Us Plan Step 2: Update Footer Navigation** completed. Added contact link to footer.
+-   **Contact Us Plan Step 3: Create Documentation** completed. Added comprehensive documentation for the contact page.

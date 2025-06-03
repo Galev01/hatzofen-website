@@ -32,6 +32,10 @@
 			</div>
 
 			<nav class="footer-nav mb-6">
+				<a href="/contact-us" class="text-sm text-brand-text-light opacity-70 hover:opacity-100 hover:text-brand-accent transition mx-2">
+					צור קשר
+				</a>
+				<span class="text-brand-text-light opacity-50">|</span>
 				<a href="/privacy-policy" class="text-sm text-brand-text-light opacity-70 hover:opacity-100 hover:text-brand-accent transition mx-2">
 					מדיניות פרטיות
 				</a>
