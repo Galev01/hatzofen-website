@@ -39,6 +39,10 @@
 				<a href="/terms-of-use" class="text-sm text-brand-text-light opacity-70 hover:opacity-100 hover:text-brand-accent transition mx-2">
 					תנאי שימוש
 				</a>
+				<span class="text-brand-text-light opacity-50">|</span>
+				<a href="/account-deletion" class="text-sm text-brand-text-light opacity-70 hover:opacity-100 hover:text-brand-accent transition mx-2">
+					מחיקת חשבון
+				</a>
 				
 				<!-- Optional: Social media links, contact email can be added here -->
 			</nav>
