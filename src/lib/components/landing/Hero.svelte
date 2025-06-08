@@ -1,7 +1,9 @@
 <!-- src/lib/components/landing/Hero.svelte -->
 <script lang="ts">
-	// No specific script logic needed for this component yet
-	// import { browser } from '$app/environment'; // No longer needed as we are using static images
+	// Function to show Google Play coming soon message
+	function showGooglePlayMessage() {
+		alert('בקרוב ב-Google Play!\n\nתאריך משוער: 1/07/2025\n\nהאפליקציה זמינה כעת ב-App Store');
+	}
 </script>
 
 <section id="hero" class="py-16 md:py-24">
@@ -52,19 +54,21 @@
 		<div class="mt-12 md:mt-16">
 			<div class="hero-cta-buttons flex flex-col sm:flex-row justify-center items-center gap-4">
 				<a 
-					href="/" 
+					href="https://apps.apple.com/il/app/%D7%94%D7%A6%D7%95%D7%A4%D7%9F-%D7%A4%D7%90%D7%96%D7%9C-%D7%A2%D7%91%D7%A8%D7%99/id6746350040?l=he" 
+					target="_blank"
+					rel="noopener noreferrer"
 					class="btn-appstore transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-brand-background rounded-md"
 					aria-label="Download on the App Store"
 				>
 					<img src="/icons/App Store.svg" alt="הורד ב-App Store" class="h-12 md:h-14 mx-auto sm:mx-0">
 				</a>
-				<a 
-					href="/" 
-					class="btn-googleplay transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-brand-background rounded-md"
-					aria-label="Get it on Google Play"
+				<button 
+					on:click={showGooglePlayMessage}
+					class="btn-googleplay transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-brand-background rounded-md cursor-pointer"
+					aria-label="Get it on Google Play - Coming Soon"
 				>
-					<img src="/icons/Google Play.svg" alt="הורד ב-Google Play" class="h-12 md:h-14 mx-auto sm:mx-0">
-				</a>
+					<img src="/icons/Google Play.svg" alt="הורד ב-Google Play - בקרוב" class="h-12 md:h-14 mx-auto sm:mx-0">
+				</button>
 			</div>
 		</div>
 	</div>

@@ -52,10 +52,10 @@ Develop a fully responsive, Hebrew-first (RTL) landing page for the "הצופן"
 -   **Plan (SvelteKit & Tailwind) Step 10: Footer Component Implementation** was completed.
 
 ## Status
-Project summary received. All previously planned steps for the SvelteKit and Tailwind CSS implementation are complete. Ready for the next set of instructions.
+Apple App Store integration completed successfully. All App Store buttons now link to the official app listing with proper external link attributes. Documentation has been created and workflow state updated.
 
 ## Plan
-Waiting for user's next steps.
+Waiting for user's next steps. Ready for Google Play Store integration when approved.
 
 ## New Plan: Legal Pages
 
@@ -186,6 +186,12 @@ Waiting for user's next instructions.
 -   **Contact Us Plan Step 1: Create Contact Us Page** completed. Implemented comprehensive contact page with email, LinkedIn, and contact form that opens user's email client.
 -   **Contact Us Plan Step 2: Update Footer Navigation** completed. Added contact link to footer.
 -   **Contact Us Plan Step 3: Create Documentation** completed. Added comprehensive documentation for the contact page.
+-   **FAQ Plan Step 1: Create FAQ Component** completed. Implemented animated dropdown FAQ with 7 comprehensive questions and answers.
+-   **FAQ Plan Step 2: Integrate FAQ into Main Page** completed. Added FAQ section to main page after DiscoverSection.
+-   **Apple App Store Integration Plan Step 1: Update Hero Section App Store Button** completed. Updated link to official App Store URL with proper external link attributes.
+-   **Apple App Store Integration Plan Step 2: Update Footer Section App Store Button** completed. Updated link to official App Store URL with proper external link attributes.
+-   **Apple App Store Integration Plan Step 3: Create Documentation** completed. Added comprehensive documentation for App Store integration.
+-   **Apple App Store Integration Plan Step 4: Add Google Play Coming Soon Message** completed. Converted Google Play buttons to interactive buttons with user-friendly coming soon message.
 
 ## Plan: FAQ Section
 
@@ -198,6 +204,31 @@ Waiting for user's next instructions.
     *   Questions cover gameplay, difficulty levels, content types, age appropriateness, hints system, pricing, and support
 
 2.  **Integrate FAQ into Main Page (`src/routes/+page.svelte`)**: COMPLETED
+
+## Plan: Apple App Store Integration
+
+1.  **Update Hero Section App Store Button (`src/lib/components/landing/Hero.svelte`)**: COMPLETED
+    *   Updated Apple App Store button link from `href="/"` to official App Store URL
+    *   Added `target="_blank"` and `rel="noopener noreferrer"` attributes for security and proper new tab behavior
+    *   App Store URL: https://apps.apple.com/il/app/%D7%94%D7%A6%D7%95%D7%A4%D7%9F-%D7%A4%D7%90%D7%96%D7%9C-%D7%A2%D7%91%D7%A8%D7%99/id6746350040?l=he
+
+2.  **Update Footer Section App Store Button (`src/lib/components/landing/PageFooter.svelte`)**: COMPLETED
+    *   Updated Apple App Store button link from `href="/"` to official App Store URL
+    *   Added `target="_blank"` and `rel="noopener noreferrer"` attributes for security and proper new tab behavior
+    *   App Store URL: https://apps.apple.com/il/app/%D7%94%D7%A6%D7%95%D7%A4%D7%9F-%D7%A4%D7%90%D7%96%D7%9C-%D7%A2%D7%91%D7%A8%D7%99/id6746350040?l=he
+
+3.  **Create Documentation (`docs/app-store-integration.md`)**: COMPLETED
+    *   Comprehensive documentation of Apple App Store integration
+    *   App details: הצופן - פאזל עברי, ID: 6746350040, Developer: Gal Lev
+    *   Technical implementation details
+    *   Future maintenance notes for Google Play Store integration
+    *   Deployment instructions
+
+4.  **Add Google Play Coming Soon Message**: COMPLETED
+    *   Converted Google Play buttons from links to interactive buttons
+    *   Added JavaScript function to display coming soon message: "בקרוב ב-Google Play! תאריך משוער: 1/07/2025"
+    *   Updated both Hero and Footer components
+    *   Enhanced user experience by providing clear expectations
     *   Added FAQ component import
     *   Positioned FAQ section after DiscoverSection in the page flow
     *   Maintains consistent page structure and styling
