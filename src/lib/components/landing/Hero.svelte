@@ -44,7 +44,6 @@
 					</h1>
 					<p class="text-lg sm:text-xl text-brand-text-light opacity-90">
 						פאזל קריפטוגרפי ממכר המשלב אתגר וידע בשפה העברית<br>
-						בקרוב בחנויות האפליקציות
 					</p>
 				</div>
 			</div>
