@@ -150,7 +150,7 @@ Waiting for user's next instructions.
 
 1.  **Create Contact Us Page (`src/routes/contact-us/+page.svelte`)**: COMPLETED
     *   Created comprehensive contact page with multiple contact methods
-    *   Email contact section with direct mailto link to `hatzofen.haivri@gmail.com`
+    *   Email contact section with direct mailto link to `support@hatzofen.com`
     *   LinkedIn profile section (placeholder URL)
     *   Full-featured contact form with validation
     *   Form submission opens user's email client with pre-filled data

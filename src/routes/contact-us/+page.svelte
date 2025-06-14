@@ -30,7 +30,7 @@
 				`הודעה:\n${formData.message}`
 			);
 			
-			const mailtoUrl = `mailto:hatzofen.haivri@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+			const mailtoUrl = `mailto:support@hatzofen.com?subject=${emailSubject}&body=${emailBody}`;
 			
 			// Open email client
 			window.location.href = mailtoUrl;
@@ -102,11 +102,11 @@
 								שלח אליי אימייל ואחזור אליך בהקדם האפשרי
 							</p>
 							<a 
-								href="mailto:hatzofen.haivri@gmail.com" 
+								href="mailto:support@hatzofen.com" 
 								class="text-brand-accent hover:text-brand-primary transition-colors font-medium"
 								dir="ltr"
 							>
-								hatzofen.haivri@gmail.com
+								support@hatzofen.com
 							</a>
 						</div>
 

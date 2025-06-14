@@ -27,7 +27,7 @@
 		</p>
 
 		<form 
-			action="mailto:hatzofen.haivri@gmail.com?subject=%D7%91%D7%A7%D7%A9%D7%AA%20%D7%9E%D7%97%D7%99%D7%A7%D7%AA%20%D7%97%D7%A9%D7%91%D7%95%D7%9F%20-%20%D7%94%D7%A6%D7%95%D7%A4%D7%9F" 
+			action="mailto:support@hatzofen.com?subject=%D7%91%D7%A7%D7%A9%D7%AA%20%D7%9E%D7%97%D7%99%D7%A7%D7%AA%20%D7%97%D7%A9%D7%91%D7%95%D7%9F%20-%20%D7%94%D7%A6%D7%95%D7%A4%D7%9F" 
 			method="post" 
 			enctype="text/plain"
 			class="mt-8 space-y-6"
@@ -67,7 +67,7 @@
 		</form>
 
 		<p class="mt-10">
-			אם נתקלת בבעיות או שיש לך שאלות נוספות, אנא פנה אלינו ישירות בכתובת: <a href="mailto:hatzofen.haivri@gmail.com">hatzofen.haivri@gmail.com</a>.
+			אם נתקלת בבעיות או שיש לך שאלות נוספות, אנא פנה אלינו ישירות בכתובת: <a href="mailto:support@hatzofen.com">support@hatzofen.com</a>.
 		</p>
 
 	</article>
