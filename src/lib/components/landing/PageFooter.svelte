@@ -2,11 +2,6 @@
 <script lang="ts">
 	// Component logic, e.g., for dynamic year
 	const currentYear = new Date().getFullYear();
-	
-	// Function to show Google Play coming soon message
-	function showGooglePlayMessage() {
-		alert('בקרוב ב-Google Play!\n\nתאריך משוער: 1/07/2025\n\nהאפליקציה זמינה כעת ב-App Store');
-	}
 </script>
 
 <footer id="page-footer" class="bg-slate-900 text-brand-text-light py-10 md:py-16 mt-auto">
@@ -29,13 +24,15 @@
 				>
 					<img src="/icons/App Store.svg" alt="הורד ב-App Store" class="h-12 md:h-14">
 				</a>
-				<button 
-					on:click={showGooglePlayMessage}
-					class="btn-googleplay transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md cursor-pointer"
-					aria-label="Get it on Google Play - Coming Soon"
+				<a 
+					href="https://play.google.com/store/apps/details?id=com.gallev01.tzofen_native"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-googleplay transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md"
+					aria-label="Get it on Google Play"
 				>
-					<img src="/icons/Google Play.svg" alt="הורד ב-Google Play - בקרוב" class="h-12 md:h-14">
-				</button>
+					<img src="/icons/Google Play.svg" alt="הורד ב-Google Play" class="h-12 md:h-14">
+				</a>
 			</div>
 
 			<nav class="footer-nav mb-6">
