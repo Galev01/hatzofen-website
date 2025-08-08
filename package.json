@@ -40,6 +40,7 @@
 	},
 	"dependencies": {
 		"@types/nodemailer": "^6.4.17",
-		"nodemailer": "^7.0.3"
+    "nodemailer": "^7.0.3",
+    "marked": "^15.0.0"
 	}
 }

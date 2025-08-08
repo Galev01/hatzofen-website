@@ -56,7 +56,7 @@ To simplify asset handling and resolve potential issues, Lottie animations for A
 After configuration changes, the site was built using the SvelteKit build command.
 
 *   **Command:** `npm run build` (executed in the `hatzofen-website` directory).
-*   **Output:** This command compiles the SvelteKit application and outputs the static files into the `hatzofen-website/docs/` directory, as configured by the static adapter.
+*   **Output:** This command compiles the SvelteKit application and outputs the static files into the `hatzofen-website/docs/` directory, as configured by the static adapter. The `/changelog` page is generated as a route that fetches `changelog.he.md` from the built output root.
 
 ## GitHub Repository and GitHub Pages Setup
 

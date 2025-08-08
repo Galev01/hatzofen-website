@@ -4,7 +4,7 @@
 	const currentYear = new Date().getFullYear();
 </script>
 
-<footer id="page-footer" class="bg-slate-900 text-brand-text-light py-10 md:py-16 mt-auto">
+<footer id="page-footer" class="bg-slate-900 text-brand-text-light py-10 md:py-16 mt-auto" dir="rtl">
 	<div class="container mx-auto px-4 text-center">
 		<div class="max-w-xl mx-auto">
 			<h3 class="text-2xl md:text-3xl font-bold text-brand-primary mb-3">
@@ -50,6 +50,10 @@
 				<span class="text-brand-text-light opacity-50">|</span>
 				<a href="/account-deletion" class="text-sm text-brand-text-light opacity-70 hover:opacity-100 hover:text-brand-accent transition mx-2">
 					מחיקת חשבון
+				</a>
+				<span class="text-brand-text-light opacity-50">|</span>
+				<a href="/changelog" class="text-sm text-brand-text-light opacity-70 hover:opacity-100 hover:text-brand-accent transition mx-2">
+					יומן שינויים
 				</a>
 				
 				<!-- Optional: Social media links, contact email can be added here -->
