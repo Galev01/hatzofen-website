@@ -18,8 +18,8 @@ const config = {
 			// Add versioning to enable long-term caching
 			name: Date.now().toString()
 		},
-		// Inline critical CSS
-		inlineStyleThreshold: 1024 // Inline small CSS files automatically
+		// Inline ALL CSS to eliminate render-blocking
+		inlineStyleThreshold: 0 // Inline all CSS files
 	}
 };
 

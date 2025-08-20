@@ -46,7 +46,9 @@ export default defineConfig({
 		},
 		// Enable aggressive compression
 		minify: 'esbuild',
-		reportCompressedSize: false // Faster builds
+		reportCompressedSize: false, // Faster builds
+		// Force CSS inlining
+		cssMinify: true
 	},
 	assetsInclude: ['**/*.webp', '**/*.mp4'],
 	server: {
