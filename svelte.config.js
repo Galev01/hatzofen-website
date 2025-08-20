@@ -14,6 +14,10 @@ const config = {
 			precompress: true,
 			strict: true
 		}),
+		version: {
+			// Add versioning to enable long-term caching
+			name: Date.now().toString()
+		},
 		// Inline critical CSS
 		inlineStyleThreshold: 1024 // Inline small CSS files automatically
 	}

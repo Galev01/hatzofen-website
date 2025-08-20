@@ -32,16 +32,19 @@
 			<!-- Text Column (Logo, Title, Subtitle) (Visually Right in RTL on Desktop) -->
 			<div class="md:w-1/2 w-full flex flex-col items-center md:items-end text-center md:text-center order-2 md:order-1 mt-10 md:mt-0">
 				<div> <!-- Invisible container for grouping -->
-					<img 
-						src="/logos/Tzofen_logo2.webp" 
-						alt="הצופן App Logo" 
-						class="w-80 h-auto mx-auto md:mx-auto mb-6 md:mb-8 max-w-[320px]"
-						loading="eager"
-						fetchpriority="high"
-						width="320"
-						height="500"
-						style="aspect-ratio: 320/500;"
-					/>
+					<div class="logo-container" style="width: 320px; height: 500px; max-width: 100%; margin: 0 auto;">
+						<img 
+							src="/logos/Tzofen_logo2.webp" 
+							alt="הצופן App Logo" 
+							class="w-full h-full object-contain mx-auto mb-6 md:mb-8"
+							loading="eager"
+							fetchpriority="high"
+							width="320"
+							height="500"
+							style="width: 100%; height: 100%; object-fit: contain; object-position: center;"
+							decoding="sync"
+						/>
+					</div>
 					<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-primary mb-4 md:mb-6">
 						פאזל ישראלי עברי
 					</h1>
