@@ -34,7 +34,7 @@
 				<div> <!-- Invisible container for grouping -->
 					<div class="logo-container" style="width: 320px; height: 500px; max-width: 100%; margin: 0 auto;">
 						<img 
-							src="/logos/Tzofen_logo2.webp" 
+							src="/logos/Tzofen_logo2_optimized.webp" 
 							alt="הצופן App Logo" 
 							class="w-full h-full object-contain mx-auto mb-6 md:mb-8"
 							loading="eager"

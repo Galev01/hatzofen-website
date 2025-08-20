@@ -1,1 +1,0 @@
-import{R as m}from"../chunks/B6yX5Elp.js";export{m as component};
