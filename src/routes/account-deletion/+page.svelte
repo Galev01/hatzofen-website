@@ -8,7 +8,7 @@
 	<article class="prose prose-invert prose-headings:text-brand-primary prose-a:text-brand-accent max-w-3xl mx-auto text-right" dir="rtl">
 		<div class="flex justify-center mb-8 md:mb-10">
 			<img 
-				src="/logos/Tzofen_logo2.png" 
+				src="/logos/Tzofen_logo2.webp" 
 				alt="לוגו הצופן" 
 				class="h-128 w-38 md:h-80"
 			/>

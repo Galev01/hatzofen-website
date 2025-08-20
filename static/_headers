@@ -1,0 +1,49 @@
+# Cache static assets for 1 year
+/videos/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/logos/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/tzofen/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/icons/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/lotties/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache JS/CSS for 1 year with immutable
+/_app/immutable/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache other assets for 30 days
+*.js
+  Cache-Control: public, max-age=2592000
+
+*.css
+  Cache-Control: public, max-age=2592000
+
+*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.mp4
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML files should be cached for shorter periods
+*.html
+  Cache-Control: public, max-age=3600
+
+# Root HTML
+/
+  Cache-Control: public, max-age=3600

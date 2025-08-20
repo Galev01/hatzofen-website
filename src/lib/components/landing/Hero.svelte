@@ -18,6 +18,7 @@
 								loop 
 								muted 
 								playsinline
+								preload="metadata"
 								class="absolute top-0 left-0 w-full h-full object-cover"
 								aria-label="App gameplay video"
 							>
@@ -32,9 +33,11 @@
 			<div class="md:w-1/2 w-full flex flex-col items-center md:items-end text-center md:text-center order-2 md:order-1 mt-10 md:mt-0">
 				<div> <!-- Invisible container for grouping -->
 					<img 
-						src="/logos/Tzofen_logo2.png" 
+						src="/logos/Tzofen_logo2.webp" 
 						alt="הצופן App Logo" 
 						class="h-80 w-auto mx-auto md:mx-auto mb-6 md:mb-8"
+						loading="eager"
+						fetchpriority="high"
 					/>
 					<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-primary mb-4 md:mb-6">
 						פאזל ישראלי עברי

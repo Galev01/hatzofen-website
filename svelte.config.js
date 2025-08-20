@@ -11,7 +11,7 @@ const config = {
 			pages: 'docs',
 			assets: 'docs',
 			fallback: null, // can be 'index.html' or '200.html' for SPA-like behavior
-			precompress: false,
+			precompress: true,
 			strict: true
 		})
 	}

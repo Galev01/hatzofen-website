@@ -3,27 +3,27 @@
 	// No specific script logic needed yet
 	const galleryItems = [
 		{
-			src: 'tzofen/homescreen.jpg',
+			src: 'tzofen/homescreen.webp',
 			alt: 'App HomeScreen Screenshot',
 			caption: 'מסך הבית הראשי'
 		},
 		{
-			src: 'tzofen/catscreen.jpg',
+			src: 'tzofen/catscreen.webp',
 			alt: 'App CategorySelectScreen Screenshot',
 			caption: 'בחירת קטגוריה וחידה'
 		},
 		{
-			src: 'tzofen/puzscreen.jpg',
+			src: 'tzofen/puzscreen.webp',
 			alt: 'App PuzzleScreen Screenshot',
 			caption: 'מסך החידה בפעולה'
 		},
 		{
-			src: 'tzofen/solvedscreen.jpg',
+			src: 'tzofen/solvedscreen.webp',
 			alt: 'App PuzzleSolvedScreen Screenshot',
 			caption: 'חידה פתורה וציטוט חשוף'
 		},
 		{
-			src: 'tzofen/hintscreen.jpg',
+			src: 'tzofen/hintscreen.webp',
 			alt: 'App HintsModal Screenshot',
 			caption: 'אפשרויות רמזים'
 		}
@@ -45,6 +45,8 @@
 							src="{item.src}" 
 							alt="{item.alt}" 
 							class="absolute top-0 left-0 w-full h-full object-contain bg-slate-800"
+							loading="lazy"
+							decoding="async"
 						/>
 					</div>
 					<p class="screenshot-caption p-2 text-center text-xs text-brand-text-light opacity-80 group-hover:opacity-100 transition-opacity">
