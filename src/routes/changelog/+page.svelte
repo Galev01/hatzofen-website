@@ -5,9 +5,17 @@
   let html = '';
 
   async function loadMarkdown() {
-    const res = await fetch('/changelog.he.md', { cache: 'no-cache' });
-    const text = await res.text();
-    html = await marked.parse(text);
+    try {
+      const res = await fetch('/changelog.he.md', { cache: 'no-cache' });
+      if (!res.ok) {
+        throw new Error(`Failed to load: ${res.status}`);
+      }
+      const text = await res.text();
+      html = await marked.parse(text);
+    } catch (error) {
+      console.error('Error loading markdown:', error);
+      html = '<p>שגיאה בטעינת יומן השינויים</p>';
+    }
   }
 
   onMount(loadMarkdown);
