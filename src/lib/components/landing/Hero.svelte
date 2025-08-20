@@ -10,7 +10,7 @@
 			<!-- Video Column (Visually Left in RTL on Desktop) -->
 			<div class="md:w-1/2 w-full hidden md:flex justify-center items-center order-1 md:order-2">
 				<div class="w-full max-w-[400px] sm:max-w-[340px] mx-auto">
-					<div class="iphone-frame relative shadow-2xl shadow-brand-primary/30">
+					<div class="iphone-frame relative shadow-2xl shadow-brand-primary-30">
 						<div class="video-wrapper-for-iphone overflow-hidden">
 							<video 
 								src="/videos/tzofen_video.mp4" 
@@ -30,28 +30,27 @@
 			</div>
 
 			<!-- Text Column (Logo, Title, Subtitle) (Visually Right in RTL on Desktop) -->
-			<div class="md:w-1/2 w-full flex flex-col items-center md:items-end text-center md:text-center order-2 md:order-1 mt-10 md:mt-0">
-				<div> <!-- Invisible container for grouping -->
-					<div class="logo-container" style="width: 320px; height: 500px; max-width: 100%; margin: 0 auto;">
-						<img 
-							src="/logos/Tzofen_logo2_optimized.webp" 
-							alt="הצופן App Logo" 
-							class="w-full h-full object-contain mx-auto mb-6 md:mb-8"
-							loading="eager"
-							fetchpriority="high"
-							width="320"
-							height="500"
-							style="width: 100%; height: 100%; object-fit: contain; object-position: center;"
-							decoding="sync"
-						/>
-					</div>
-					<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-primary mb-4 md:mb-6">
-						פאזל ישראלי עברי
-					</h1>
-					<p class="text-lg sm:text-xl text-brand-text-light opacity-90">
-						פאזל קריפטוגרפי ממכר המשלב אתגר וידע בשפה העברית<br>
-					</p>
+			<div class="md:w-1/2 w-full flex flex-col items-center text-center order-2 md:order-1 mt-10 md:mt-0">
+				<!-- Logo with responsive sizing -->
+				<div class="flex justify-center w-full mb-6 md:mb-8">
+					<img 
+						src="/logos/Tzofen_logo2_optimized.webp" 
+						alt="הצופן App Logo" 
+						class="w-auto h-auto object-contain max-w-[240px] sm:max-w-[280px] md:max-w-[320px]"
+						loading="eager"
+						fetchpriority="high"
+						width="320"
+						height="500"
+						style="aspect-ratio: 320/500; max-height: 400px;"
+					/>
 				</div>
+				
+				<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-primary mb-4 md:mb-6">
+					פאזל ישראלי עברי
+				</h1>
+				<p class="text-lg sm:text-xl text-brand-text-light opacity-90">
+					פאזל קריפטוגרפי ממכר המשלב אתגר וידע בשפה העברית<br>
+				</p>
 			</div>
 		</div>
 

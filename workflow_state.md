@@ -9,7 +9,7 @@ Optimize website performance based on latest PageSpeed insights: reduce image de
 5. **Documentation Update**: Update performance docs with latest optimizations
 
 ## Status
-Phase 4 optimization completed. Achieved 36.5 KiB image savings and optimized critical path.
+Phase 4 optimization and mobile fix completed. Achieved 36.5 KiB image savings and restored mobile functionality.
 
 ## Log
 - Analyzed latest PageSpeed results: Image oversized (573x897 → 319x500), 72.6 KiB unused JS, 421ms critical path
@@ -19,5 +19,9 @@ Phase 4 optimization completed. Achieved 36.5 KiB image savings and optimized cr
 - Added comprehensive resource hints (preload, preconnect, modulepreload)
 - Enhanced Vite configuration with aggressive minification and tree-shaking
 - Added critical video/iframe container styles directly in HTML head
-- Build completed successfully with all optimizations applied
+- ISSUE: Mobile display broken after CSS optimization changes
+- FIXED: Responsive logo sizing with proper max-width constraints (240px/280px/320px)
+- FIXED: Added missing critical CSS classes (flex-grow, min-h-screen, font-hebrew)
+- FIXED: Corrected HTML structure in Hero component
+- Build completed successfully with mobile functionality restored
 - Final logo: Tzofen_logo2_optimized.webp (41.5KB, exact display dimensions 320x500)
