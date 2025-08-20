@@ -35,9 +35,12 @@
 					<img 
 						src="/logos/Tzofen_logo2.webp" 
 						alt="הצופן App Logo" 
-						class="h-80 w-auto mx-auto md:mx-auto mb-6 md:mb-8"
+						class="w-80 h-auto mx-auto md:mx-auto mb-6 md:mb-8 max-w-[320px]"
 						loading="eager"
 						fetchpriority="high"
+						width="320"
+						height="500"
+						style="aspect-ratio: 320/500;"
 					/>
 					<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-primary mb-4 md:mb-6">
 						פאזל ישראלי עברי

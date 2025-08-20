@@ -5,6 +5,19 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
+		<!-- Critical CSS for above-the-fold content -->
+		<style>
+			/* Critical styles for initial render */
+			html { direction: rtl; }
+			body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #f1f5f9; }
+			.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+			.hero-section { padding: 4rem 0; }
+			.text-brand-primary { color: #9b87f5; }
+			.text-brand-text-light { color: #f1f5f9; }
+			.hidden { display: none; }
+			@media (min-width: 768px) { .md\\:flex { display: flex; } .md\\:hidden { display: none; } }
+		</style>
+		
 		<!-- Preload critical assets -->
 		<link rel="preload" href="%sveltekit.assets%/logos/Tzofen_logo2.webp" as="image" fetchpriority="high" />
 		<link rel="preload" href="%sveltekit.assets%/videos/tzofen_video.mp4" as="video" type="video/mp4" />

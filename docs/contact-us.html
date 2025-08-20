@@ -5,6 +5,19 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
+		<!-- Critical CSS for above-the-fold content -->
+		<style>
+			/* Critical styles for initial render */
+			html { direction: rtl; }
+			body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #f1f5f9; }
+			.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+			.hero-section { padding: 4rem 0; }
+			.text-brand-primary { color: #9b87f5; }
+			.text-brand-text-light { color: #f1f5f9; }
+			.hidden { display: none; }
+			@media (min-width: 768px) { .md\\:flex { display: flex; } .md\\:hidden { display: none; } }
+		</style>
+		
 		<!-- Preload critical assets -->
 		<link rel="preload" href="./logos/Tzofen_logo2.webp" as="image" fetchpriority="high" />
 		<link rel="preload" href="./videos/tzofen_video.mp4" as="video" type="video/mp4" />
@@ -15,13 +28,13 @@
 		
 		
 		<link href="./_app/immutable/assets/vendor.Bvl-NajH.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/0.B3kUCFnf.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start._CJLo-By.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Bf7249Pj.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.BiYoL60M.js">
+		<link href="./_app/immutable/assets/0.EoIIb_n-.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.D5wGNoWm.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/kHkGlWGN.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.BYgfCrT0.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Dp1pzeXC.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.C0DArl5Z.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/5.XabMBthW.js"><!--[--><meta name="description" content="צור קשר עם צוות הצופן. שלח לנו הודעה, מצא אותנו ברשתות החברתיות או צור קשר ישירות באימייל."><!--]--><title>צור קשר - הצופן</title>
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.Cpr8_Y2i.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/5.C8q0skxH.js"><!--[--><meta name="description" content="צור קשר עם צוות הצופן. שלח לנו הודעה, מצא אותנו ברשתות החברתיות או צור קשר ישירות באימייל."><!--]--><title>צור קשר - הצופן</title>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents"><!--[--><!--[--><!----><div class="font-hebrew bg-brand-background text-brand-text-light min-h-screen flex flex-col"><!----><!----><main class="min-h-screen bg-brand-background text-brand-text-light"><section class="py-16 md:py-24"><div class="container mx-auto px-4 text-center"><h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-primary mb-6">צור קשר</h1> <p class="text-xl md:text-2xl text-brand-text-light opacity-90 max-w-3xl mx-auto">יש לך שאלות, הצעות או רוצה לשתף אותנו ברעיונות? תמיד פתוח לשיחות והצעות!
@@ -29,15 +42,15 @@
 			
 			<script>
 				{
-					__sveltekit_2dvhmk = {
+					__sveltekit_1w8d1x9 = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start._CJLo-By.js"),
-						import("./_app/immutable/entry/app.BiYoL60M.js")
+						import("./_app/immutable/entry/start.D5wGNoWm.js"),
+						import("./_app/immutable/entry/app.BYgfCrT0.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],

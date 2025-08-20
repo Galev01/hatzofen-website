@@ -8,7 +8,7 @@ export default defineConfig({
 	},
 	build: {
 		target: 'es2018',
-		cssCodeSplit: true,
+		cssCodeSplit: false, // Combine CSS to reduce render-blocking requests
 		rollupOptions: {
 			output: {
 				manualChunks: (id) => {
@@ -19,6 +19,15 @@ export default defineConfig({
 					if (id.includes('lottie')) {
 						return 'lottie';
 					}
+				},
+				// Optimize CSS output
+				assetFileNames: (assetInfo) => {
+					const info = assetInfo.name.split('.');
+					const extType = info[info.length - 1];
+					if (/\.(css)$/.test(assetInfo.name)) {
+						return `assets/styles.[hash].${extType}`;
+					}
+					return `assets/[name].[hash].${extType}`;
 				}
 			}
 		},

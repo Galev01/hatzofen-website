@@ -13,7 +13,9 @@ const config = {
 			fallback: null, // can be 'index.html' or '200.html' for SPA-like behavior
 			precompress: true,
 			strict: true
-		})
+		}),
+		// Inline critical CSS
+		inlineStyleThreshold: 1024 // Inline small CSS files automatically
 	}
 };
 
