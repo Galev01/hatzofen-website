@@ -11,7 +11,11 @@
         throw new Error(`Failed to load: ${res.status}`);
       }
       const text = await res.text();
-      html = await marked.parse(text);
+      if (text && marked && marked.parse) {
+        html = await marked.parse(text);
+      } else {
+        throw new Error('Markdown parsing failed');
+      }
     } catch (error) {
       console.error('Error loading markdown:', error);
       html = '<p>שגיאה בטעינת יומן השינויים</p>';
