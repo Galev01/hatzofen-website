@@ -19,11 +19,31 @@ export default defineConfig({
 						if (id.includes('lottie')) {
 							return 'lottie';
 						}
+						if (id.includes('svelte')) {
+							return 'svelte';
+						}
+						if (id.includes('marked')) {
+							return 'marked';
+						}
 						return 'vendor';
 					}
-					// Split component chunks
+					// Split component chunks by feature
+					if (id.includes('src/lib/components/landing')) {
+						return 'landing-components';
+					}
+					if (id.includes('src/lib/components/forms')) {
+						return 'form-components';
+					}
 					if (id.includes('src/lib/components')) {
 						return 'components';
+					}
+					// Split route chunks
+					if (id.includes('src/routes/')) {
+						if (id.includes('changelog')) return 'changelog';
+						if (id.includes('contact-us')) return 'contact';
+						if (id.includes('privacy-policy')) return 'privacy';
+						if (id.includes('terms-of-use')) return 'terms';
+						if (id.includes('account-deletion')) return 'account';
 					}
 				},
 				// Optimize file naming for better caching

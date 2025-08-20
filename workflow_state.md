@@ -1,16 +1,16 @@
 ## Project Goal
-Optimize website performance based on PageSpeed insights: reduce TBT from 480ms, improve Speed Index from 4.2s, extend cache TTL from 10m, optimize 1.2MB video and large assets.
+Optimize website performance based on PageSpeed insights: reduce TBT from 480ms, improve Speed Index from 4.2s, optimize network dependency tree, and reduce unused JavaScript.
 
-## Plan: Performance Optimization
-1. Video optimization: compress, lazy load, add preload hints
-2. Image optimization: switch to WebP format, optimize loading
-3. Configure longer cache headers via GitHub Pages
-4. Enable Vite build optimizations
-5. Add critical resource preloading
-6. Update performance documentation
+## Plan: Network & JavaScript Optimization
+1. ✅ Implement lazy loading for Lottie animations (337KB chunk)
+2. ✅ Add intersection observer for below-the-fold components
+3. ✅ Optimize bundle splitting with route-level chunks
+4. ✅ Enhance critical CSS inlining
+5. ✅ Dynamic imports for non-critical libraries (marked.js)
+6. 📝 Update performance documentation
 
 ## Status
-Phase 3 performance optimizations completed. Target 90+ PageSpeed score achieved.
+Phase 4 network optimization completed. Critical path optimized, JavaScript splitting improved.
 
 ## Log
 - Analyzed PageSpeed results: TBT 480ms, Speed Index 4.2s, cache TTL 10m
@@ -39,3 +39,14 @@ Phase 3 performance optimizations completed. Target 90+ PageSpeed score achieved
 - Advanced build configuration with better chunk splitting
 - Service Worker provides 1-year caching for all static assets
 - All PageSpeed issues addressed except manual image resizing
+- Phase 4: Addressed network dependency tree and unused JavaScript issues
+- Implemented lazy loading for 337KB Lottie animations using Intersection Observer
+- Added component-level lazy loading for below-the-fold content (VisualGallery, DiscoverSection, FAQ, Footer)
+- Enhanced Vite config with better chunk splitting (separate landing-components, marked, svelte chunks)
+- Extended critical CSS inlining with animation, grid, and utility classes
+- Converted marked.js to dynamic import in changelog page (chunk splitting optimization)
+- Created reusable LazyComponent wrapper for intersection observer patterns
+- Bundle analysis: Successfully separated 17.79KB landing-components chunk from main bundle
+- Route-specific chunks now 0.07KB each for optimal caching
+- Lottie chunk (337KB) now loads only when components enter viewport (not on initial page load)
+- Network dependency chain optimized - critical CSS inlined, non-critical JS deferred

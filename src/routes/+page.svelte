@@ -2,6 +2,8 @@
 	import Hero from '$lib/components/landing/Hero.svelte';
 	import HowToPlay from '$lib/components/landing/HowToPlay.svelte';
 	import FeaturesShowcase from '$lib/components/landing/FeaturesShowcase.svelte';
+	import LazyComponent from '$lib/components/LazyComponent.svelte';
+	// Lazy load below-the-fold components
 	import VisualGallery from '$lib/components/landing/VisualGallery.svelte';
 	import DiscoverSection from '$lib/components/landing/DiscoverSection.svelte';
 	import FAQ from '$lib/components/landing/FAQ.svelte';
@@ -17,9 +19,21 @@
 	<Hero />
 	<HowToPlay />
 	<FeaturesShowcase />
-	<VisualGallery />
-	<DiscoverSection />
-	<FAQ />
+	
+	<!-- Lazy load below-the-fold components -->
+	<LazyComponent rootMargin="200px">
+		<VisualGallery />
+	</LazyComponent>
+	
+	<LazyComponent rootMargin="150px">
+		<DiscoverSection />
+	</LazyComponent>
+	
+	<LazyComponent rootMargin="100px">
+		<FAQ />
+	</LazyComponent>
 </main>
 
-<PageFooter />
+<LazyComponent rootMargin="50px">
+	<PageFooter />
+</LazyComponent>

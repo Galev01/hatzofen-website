@@ -30,6 +30,31 @@
 			.focus\\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}
 			.focus\\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}
 			
+			/* Animation utilities */
+			.animate-spin{animation:spin 1s linear infinite}
+			.animate-pulse{animation:pulse 2s cubic-bezier(0.4,0,0.6,1) infinite}
+			@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+			@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+			
+			/* Grid utilities */
+			.grid{display:grid}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
+			.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+			.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+			
+			/* Border utilities */
+			.border{border-width:1px}.border-4{border-width:4px}.border-t-brand-primary{border-top-color:#9b87f5}
+			.border-brand-primary\\/20{border-color:rgba(155,135,245,0.2)}.border-brand-primary\\/30{border-color:rgba(155,135,245,0.3)}
+			.border-brand-primary\\/50{border-color:rgba(155,135,245,0.5)}
+			
+			/* Additional sizing */
+			.w-8{width:2rem}.w-12{width:3rem}.w-16{width:4rem}.h-8{height:2rem}.h-12{height:3rem}.h-16{height:4rem}.h-32{height:8rem}
+			
+			/* Aspect ratio utilities */
+			.aspect-ratio{aspect-ratio:attr(data-aspect-ratio)}.w-\\[300px\\]{width:300px}.h-\\[300px\\]{height:300px}
+			
+			/* Background utilities */
+			.bg-brand-primary\\/5{background-color:rgba(155,135,245,0.05)}.bg-brand-primary\\/10{background-color:rgba(155,135,245,0.1)}
+			
 			/* Custom filter */
 			.filter-brand-primary{filter:brightness(0) saturate(100%) invert(62%) sepia(43%) saturate(5436%) hue-rotate(227deg) brightness(98%) contrast(97%)}
 			
@@ -48,35 +73,41 @@
 		<!-- Preload critical assets -->
 		<link rel="preload" href="./logos/Tzofen_logo2.webp" as="image" fetchpriority="high" />
 		<link rel="preload" href="./videos/tzofen_video.mp4" as="video" type="video/mp4" />
+		<link rel="preload" href="./icons/App Store.svg" as="image" />
+		<link rel="preload" href="./icons/Google Play.svg" as="image" />
 		
 		<!-- DNS prefetch for external resources -->
 		<link rel="dns-prefetch" href="//apps.apple.com" />
 		<link rel="dns-prefetch" href="//play.google.com" />
 		
+		<!-- Resource hints for performance -->
+		<link rel="preconnect" href="//fonts.gstatic.com" crossorigin />
 		
-		<link href="./_app/immutable/assets/components.BJo2jtZn.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/0.DEgMPoEA.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.Ctq4zpft.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ClC967Ay.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.DhZZhPJ8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/6KNjLF0K.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.OXMdq5Q4.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/7.BHXh8lhE.js"><!--[--><meta name="description" content="תנאי השימוש של משחק 'הצופן'. אנא קרא בעיון לפני השימוש במשחק."> <meta name="robots" content="noindex, nofollow"><!--]--><title>תנאי שימוש - הצופן</title>
+		
+		<link href="./_app/immutable/assets/0.B1nsYER7.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.BVYSML6A.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DUVIQDUP.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/tD3xBLgZ.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.CrSP6MoF.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C-jnm4S1.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0._d-vVwP2.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/7.CmjZDNCE.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/B4RzSFBA.js"><!--[--><meta name="description" content="תנאי השימוש של משחק 'הצופן'. אנא קרא בעיון לפני השימוש במשחק."> <meta name="robots" content="noindex, nofollow"><!--]--><title>תנאי שימוש - הצופן</title>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents"><!--[--><!--[--><!----><div class="font-hebrew bg-brand-background text-brand-text-light min-h-screen flex flex-col"><!----><!----><div class="container mx-auto px-4 py-12 md:py-16 min-h-[calc(100vh-theme(spacing.32)-theme(spacing.32))]"><article class="prose prose-invert prose-headings:text-brand-primary prose-a:text-brand-accent max-w-3xl mx-auto"><h1>תנאי שימוש למשחק הצופן</h1> <p>תאריך כניסה לתוקף: 01/04/2025</p> <p>ברוכים הבאים לצופן (להלן: "האפליקציה"), המופעל על ידי לימי פתרונות מחשוב (להלן: "אנחנו", "שלנו"). השימוש באפליקציה כפוף לתנאי השימוש הבאים (להלן: "התנאים"). בשימוש באפליקציה אתם מסכימים ומתחייבים לתנאים אלו.</p> <h3>1. קבלת התנאים</h3> <p>על ידי הורדה, התקנה או שימוש באפליקציה, אתם מאשרים כי קראתם, הבנתם והסכמתם לתנאי שימוש אלו ולמדיניות הפרטיות שלנו.</p> <h3>2. שימוש באפליקציה</h3> <p><strong>אתם רשאים להשתמש באפליקציה למטרות אישיות ולא מסחריות בלבד</strong>.</p> <p><strong>השימוש באפליקציה כפוף לחוקי מדינת ישראל ולחוקים החלים במדינה שבה אתם משתמשים באפליקציה</strong>.</p> <p><strong>אינכם רשאים להשתמש באפליקציה באופן שיגרום לפגיעה, הפרעה, או נזק למשתמשים אחרים או למערכות הטכנולוגיות שלנו</strong>.</p> <p><strong>אסור לכם להשתמש בתוכנות או כלים אוטומטיים, בוטים, או שיטות מניפולציה כדי לעקוף מנגנוני המשחק או לקבל יתרונות לא הוגנים</strong>.</p> <p><strong>אסור לבצע הנדסה הפוכה, פירוק, או ניסיון לחלץ קוד מקור של האפליקציה</strong>.</p> <h3>3. חשבון משתמש ואבטחה</h3> <p><strong>אתם אחראים לשמירה על סודיות המידע שלכם (שם משתמש, סיסמה ופרטי כניסה)</strong>.</p> <p><strong>אתם מסכימים שלא לשתף את פרטי הכניסה שלכם עם צד שלישי</strong>.</p> <p><strong>עליכם להודיע לנו מיידית במקרה של גישה לא מורשית לחשבון שלכם</strong>.</p> <p><strong>אתם אחראים לכל הפעילות שמתרחשת תחת החשבון שלכם</strong>.</p> <p><strong>אנו שומרים לעצמנו את הזכות להשעות או לסגור חשבונות בגין הפרת תנאי השימוש</strong>.</p> <h3>4. תוכן וזכויות יוצרים</h3> <p><strong>כל זכויות היוצרים והקניין הרוחני באפליקציה, כולל התוכן, הגרפיקה, הקוד והעיצוב, שייכים לנו</strong>.</p> <p><strong>אסור להעתיק, לשנות, להפיץ, או להשתמש בתכנים מהאפליקציה ללא רשות מפורשת בכתב מאיתנו</strong>.</p> <p><strong>התוכן שאתם יוצרים באפליקציה (כגון פתרונות חידות) נשאר שלכם, אך אתם מעניקים לנו רישיון להשתמש בו לצרכי שיפור השירות</strong>.</p> <h3>5. שירותי פרסום</h3> <p><strong>האפליקציה מציגה פרסומות באמצעות פלטפורמת IronSource (Unity LevelPlay) ושותפי פרסום נוספים</strong>.</p> <p><strong>השתתפות בצפייה בפרסומות היא וולונטרית ומאפשרת קבלת תגמולים במשחק</strong>.</p> <p><strong>איננו אחראים לתוכן הפרסומות או למוצרים ושירותים המפורסמים</strong>.</p> <p><strong>שילוב פרסומות במשחק מאפשר לנו להציע את האפליקציה בחינם</strong>.</p> <h3>6. רכישות בתוך האפליקציה</h3> <p><strong>האפליקציה עשויה להציע רכישות בתוך האפליקציה בעתיד</strong>.</p> <p><strong>רכישות אלה אינן ניתנות להחזר, אלא אם כן נאמר אחרת באופן מפורש או כפי שנדרש על פי חוק</strong>.</p> <p><strong>מחירי הרכישות עשויים להשתנות ללא הודעה מוקדמת</strong>.</p> <h3>7. מדיניות פרטיות ועוגיות</h3> <p><strong>השימוש באפליקציה כפוף למדיניות הפרטיות שלנו הזמינה לעיון בנפרד. בשימוש באפליקציה אתם מסכימים גם למדיניות הפרטיות</strong>.</p> <p><strong>האפליקציה משתמשת בטכנולוגיות מעקב לצרכי ניתוח ושיפור חוויית המשתמש</strong>.</p> <p><strong>אתם יכולים לשלוט בהגדרות המעקב דרך הגדרות המכשיר שלכם</strong>.</p> <h3>8. הגבלת אחריות</h3> <p><strong>אנו מספקים את האפליקציה "כפי שהיא" וללא אחריות מכל סוג</strong>.</p> <p><strong>איננו אחראים לכל נזק, ישיר או עקיף, שייגרם כתוצאה משימוש או חוסר יכולת להשתמש באפליקציה</strong>.</p> <p><strong>איננו מתחייבים לזמינות רציפה של השירות או לחוסר תקלות</strong>.</p> <p><strong>האחריות המקסימלית שלנו, ככל שתהיה, מוגבלת לסכום ששילמתם לנו עבור השירות (אם בכלל)</strong>.</p> <h3>9. שימוש הוגן ואמצעי אכיפה</h3> <p><strong>אנו שומרים לעצמנו את הזכות לנטר את השימוש באפליקציה לצרכי אבטחה ואכיפת תנאים</strong>.</p> <p><strong>הפרת תנאים אלו עלולה להוביל להשעיה זמנית או קבועה של החשבון</strong>.</p> <p><strong>במקרה של פעילות חשודה או הפרת תנאים, אנו עשויים לחקור ולשתף פעולה עם רשויות החוק</strong>.</p> <h3>10. הפסקת שימוש</h3> <p><strong>אנו רשאים להפסיק את הגישה לאפליקציה, בכל עת וללא הודעה מוקדמת, אם יופר אחד מתנאי שימוש אלו</strong>.</p> <p><strong>אתם רשאים להפסיק את השימוש באפליקציה בכל עת על ידי מחיקתה מהמכשיר</strong>.</p> <p><strong>הפסקת השימוש אינה משחררת אתכם מהתחייבויות שנצברו עד לאותו זמן</strong>.</p> <h3>11. שינוי תנאי השימוש</h3> <p><strong>אנו שומרים את הזכות לשנות תנאים אלו מעת לעת. עדכונים יפורסמו באפליקציה</strong>.</p> <p><strong>שימושכם באפליקציה לאחר העדכונים מהווה הסכמה לתנאים המעודכנים</strong>.</p> <p><strong>שינויים מהותיים יובאו לידיעתכם מראש במידת האפשר</strong>.</p> <h3>12. פתרון סכסוכים</h3> <p><strong>אנו מעודדים פנייה ישירה אלינו לפתרון כל בעיה או חילוקי דעות</strong>.</p> <p><strong>במקרה של סכסוך שלא ניתן לפתרון ביניכם לבינינו, נשתדל לפתור אותו בדרכי גישור לפני פנייה לבית משפט</strong>.</p> <h3>13. חוק וסמכות שיפוט</h3> <p><strong>על תנאים אלה יחולו דיני מדינת ישראל. כל סכסוך או מחלוקת הנוגעים לתנאי שימוש אלו יהיו כפופים לסמכות השיפוט הבלעדית של בתי המשפט המוסמכים בתל אביב-יפו</strong>.</p> <p><strong>אם איזה סעיף מתנאים אלו ייקבע כלא חוקי או לא ניתן לאכיפה, שאר הסעיפים יישארו בתוקף</strong>.</p> <h3>14. יצירת קשר</h3> <p>לכל שאלה בנוגע לתנאי שימוש אלו, אנא פנו אלינו ב:</p> <p><strong>דוא"ל</strong>: support@hatzofen.com</p> <p>תודה שבחרתם להשתמש באפליקציה שלנו!</p></article></div><!----><!----></div><!----><!--]--> <!--[!--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_5h1gnk = {
+					__sveltekit_lcmd18 = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.Ctq4zpft.js"),
-						import("./_app/immutable/entry/app.DhZZhPJ8.js")
+						import("./_app/immutable/entry/start.BVYSML6A.js"),
+						import("./_app/immutable/entry/app.CrSP6MoF.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 7],

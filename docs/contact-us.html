@@ -30,6 +30,31 @@
 			.focus\\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}
 			.focus\\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}
 			
+			/* Animation utilities */
+			.animate-spin{animation:spin 1s linear infinite}
+			.animate-pulse{animation:pulse 2s cubic-bezier(0.4,0,0.6,1) infinite}
+			@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+			@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+			
+			/* Grid utilities */
+			.grid{display:grid}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
+			.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+			.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+			
+			/* Border utilities */
+			.border{border-width:1px}.border-4{border-width:4px}.border-t-brand-primary{border-top-color:#9b87f5}
+			.border-brand-primary\\/20{border-color:rgba(155,135,245,0.2)}.border-brand-primary\\/30{border-color:rgba(155,135,245,0.3)}
+			.border-brand-primary\\/50{border-color:rgba(155,135,245,0.5)}
+			
+			/* Additional sizing */
+			.w-8{width:2rem}.w-12{width:3rem}.w-16{width:4rem}.h-8{height:2rem}.h-12{height:3rem}.h-16{height:4rem}.h-32{height:8rem}
+			
+			/* Aspect ratio utilities */
+			.aspect-ratio{aspect-ratio:attr(data-aspect-ratio)}.w-\\[300px\\]{width:300px}.h-\\[300px\\]{height:300px}
+			
+			/* Background utilities */
+			.bg-brand-primary\\/5{background-color:rgba(155,135,245,0.05)}.bg-brand-primary\\/10{background-color:rgba(155,135,245,0.1)}
+			
 			/* Custom filter */
 			.filter-brand-primary{filter:brightness(0) saturate(100%) invert(62%) sepia(43%) saturate(5436%) hue-rotate(227deg) brightness(98%) contrast(97%)}
 			
@@ -48,20 +73,26 @@
 		<!-- Preload critical assets -->
 		<link rel="preload" href="./logos/Tzofen_logo2.webp" as="image" fetchpriority="high" />
 		<link rel="preload" href="./videos/tzofen_video.mp4" as="video" type="video/mp4" />
+		<link rel="preload" href="./icons/App Store.svg" as="image" />
+		<link rel="preload" href="./icons/Google Play.svg" as="image" />
 		
 		<!-- DNS prefetch for external resources -->
 		<link rel="dns-prefetch" href="//apps.apple.com" />
 		<link rel="dns-prefetch" href="//play.google.com" />
 		
+		<!-- Resource hints for performance -->
+		<link rel="preconnect" href="//fonts.gstatic.com" crossorigin />
 		
-		<link href="./_app/immutable/assets/components.BJo2jtZn.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/0.DEgMPoEA.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.Ctq4zpft.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ClC967Ay.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.DhZZhPJ8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/6KNjLF0K.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.OXMdq5Q4.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/5.CjLvjw1o.js"><!--[--><meta name="description" content="צור קשר עם צוות הצופן. שלח לנו הודעה, מצא אותנו ברשתות החברתיות או צור קשר ישירות באימייל."><!--]--><title>צור קשר - הצופן</title>
+		
+		<link href="./_app/immutable/assets/0.B1nsYER7.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.BVYSML6A.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DUVIQDUP.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/tD3xBLgZ.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.CrSP6MoF.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C-jnm4S1.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0._d-vVwP2.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/5.DMw4ldfw.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DUg9uLm7.js"><!--[--><meta name="description" content="צור קשר עם צוות הצופן. שלח לנו הודעה, מצא אותנו ברשתות החברתיות או צור קשר ישירות באימייל."><!--]--><title>צור קשר - הצופן</title>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents"><!--[--><!--[--><!----><div class="font-hebrew bg-brand-background text-brand-text-light min-h-screen flex flex-col"><!----><!----><main class="min-h-screen bg-brand-background text-brand-text-light"><section class="py-16 md:py-24"><div class="container mx-auto px-4 text-center"><h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-primary mb-6">צור קשר</h1> <p class="text-xl md:text-2xl text-brand-text-light opacity-90 max-w-3xl mx-auto">יש לך שאלות, הצעות או רוצה לשתף אותנו ברעיונות? תמיד פתוח לשיחות והצעות!
@@ -69,15 +100,15 @@
 			
 			<script>
 				{
-					__sveltekit_5h1gnk = {
+					__sveltekit_lcmd18 = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.Ctq4zpft.js"),
-						import("./_app/immutable/entry/app.DhZZhPJ8.js")
+						import("./_app/immutable/entry/start.BVYSML6A.js"),
+						import("./_app/immutable/entry/app.CrSP6MoF.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],
