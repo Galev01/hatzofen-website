@@ -55,30 +55,18 @@
 				<div class="feature-item bg-brand-background p-6 rounded-lg shadow-lg text-center border border-brand-primary/50 flex flex-col items-center">
 					{#if browser}
 						{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
-							{#if LottieModule && LottieModule.LottiePlayer}
-								<LottieModule.LottiePlayer 
-									src="{feature.icon}"
-									autoplay
-									loop
-									width="{300}" 
-									height="{300}"
-									ariaLabel="{feature.alt}"
-									class="mb-5"
-								/>
-							{:else}
-								<div class="w-32 h-32 bg-brand-primary/20 rounded-lg mb-5 flex items-center justify-center">
-									<span class="text-brand-primary text-2xl">⚡</span>
-								</div>
-							{/if}
+							<LottieModule.LottiePlayer 
+								src="{feature.icon}"
+								autoplay
+								loop
+								width="{300}" 
+								height="{300}"
+								ariaLabel="{feature.alt}"
+								class="mb-5"
+							/>
 						{:catch error}
-							<div class="w-32 h-32 bg-brand-primary/20 rounded-lg mb-5 flex items-center justify-center">
-								<span class="text-brand-primary text-2xl">⚡</span>
-							</div>
+							<p class="text-red-500 text-sm">Error loading animation: {error.message}</p>
 						{/await}
-					{:else}
-						<div class="w-32 h-32 bg-brand-primary/20 rounded-lg mb-5 flex items-center justify-center">
-							<span class="text-brand-primary text-2xl">⚡</span>
-						</div>
 					{/if}
 					<h3 class="text-xl font-semibold text-brand-primary mb-2">{feature.title}</h3>
 					<p class="text-brand-text-light opacity-80 text-sm leading-relaxed flex-grow">

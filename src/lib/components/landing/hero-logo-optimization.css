@@ -1,0 +1,23 @@
+
+/* Optimized logo sizing to match exact display dimensions */
+.hero-logo {
+    width: 320px !important;
+    height: 500px !important;
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 640px) {
+    .hero-logo {
+        width: 240px !important;
+        height: 375px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-logo {
+        width: 160px !important;
+        height: 250px !important;
+    }
+}

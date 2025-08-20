@@ -22,30 +22,18 @@
 			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
 				{#if browser}
 					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
-						{#if LottieModule && LottieModule.LottiePlayer}
-							<LottieModule.LottiePlayer 
-								src="/lotties/Question Mark.json"
-								autoplay
-								loop
-								width="64px"
-								height="64px"
-								ariaLabel="בחרו חידה"
-								class="mb-4 mx-auto md:mx-0"
-							/>
-						{:else}
-							<div class="w-16 h-16 bg-brand-primary/20 rounded-lg mb-4 mx-auto md:mx-0 flex items-center justify-center">
-								<span class="text-brand-primary text-lg">?</span>
-							</div>
-						{/if}
+						<LottieModule.LottiePlayer 
+							src="/lotties/Question Mark.json"
+							autoplay
+							loop
+							width="64px"
+							height="64px"
+							ariaLabel="בחרו חידה"
+							class="mb-4 mx-auto md:mx-0"
+						/>
 					{:catch error}
-						<div class="w-16 h-16 bg-brand-primary/20 rounded-lg mb-4 mx-auto md:mx-0 flex items-center justify-center">
-							<span class="text-brand-primary text-lg">?</span>
-						</div>
+						<p class="text-red-500 text-sm">Error loading animation: {error.message}</p>
 					{/await}
-				{:else}
-					<div class="w-16 h-16 bg-brand-primary/20 rounded-lg mb-4 mx-auto md:mx-0 flex items-center justify-center">
-						<span class="text-brand-primary text-lg">?</span>
-					</div>
 				{/if}
 				<h3 class="text-xl font-semibold text-brand-primary mb-2">1. בחרו קטגוריה וחידה</h3>
 				<p class="text-brand-text-light opacity-80 text-sm leading-relaxed">
@@ -56,30 +44,18 @@
 			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
 				{#if browser}
 					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
-						{#if LottieModule && LottieModule.LottiePlayer}
-							<LottieModule.LottiePlayer 
-								src="/lotties/Binary.json"
-								autoplay
-								loop
-								width="64px"
-								height="64px"
-								ariaLabel="פענחו אותיות"
-								class="mb-4 mx-auto md:mx-0"
-							/>
-						{:else}
-							<div class="w-16 h-16 bg-brand-primary/20 rounded-lg mb-4 mx-auto md:mx-0 flex items-center justify-center">
-								<span class="text-brand-primary text-lg">1</span>
-							</div>
-						{/if}
+						<LottieModule.LottiePlayer 
+							src="/lotties/Binary.json"
+							autoplay
+							loop
+							width="64px"
+							height="64px"
+							ariaLabel="פענחו אותיות"
+							class="mb-4 mx-auto md:mx-0"
+						/>
 					{:catch error}
-						<div class="w-16 h-16 bg-brand-primary/20 rounded-lg mb-4 mx-auto md:mx-0 flex items-center justify-center">
-							<span class="text-brand-primary text-lg">1</span>
-						</div>
+						<p class="text-red-500 text-sm">Error loading animation: {error.message}</p>
 					{/await}
-				{:else}
-					<div class="w-16 h-16 bg-brand-primary/20 rounded-lg mb-4 mx-auto md:mx-0 flex items-center justify-center">
-						<span class="text-brand-primary text-lg">1</span>
-					</div>
 				{/if}
 				<h3 class="text-xl font-semibold text-brand-primary mb-2">2. פענחו את האותיות</h3>
 				<p class="text-brand-text-light opacity-80 text-sm leading-relaxed">
@@ -90,30 +66,18 @@
 			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
 				{#if browser}
 					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
-						{#if LottieModule && LottieModule.LottiePlayer}
-							<LottieModule.LottiePlayer 
-								src="/lotties/Puzzle-Solving Teamwork.json"
-								autoplay
-								loop
-								width="64px"
-								height="64px"
-								ariaLabel="גלו ציטוט"
-								class="mb-4 mx-auto md:mx-0"
-							/>
-						{:else}
-							<div class="w-16 h-16 bg-brand-primary/20 rounded-lg mb-4 mx-auto md:mx-0 flex items-center justify-center">
-								<span class="text-brand-primary text-lg">✓</span>
-							</div>
-						{/if}
+						<LottieModule.LottiePlayer 
+							src="/lotties/Puzzle-Solving Teamwork.json"
+							autoplay
+							loop
+							width="64px"
+							height="64px"
+							ariaLabel="גלו ציטוט"
+							class="mb-4 mx-auto md:mx-0"
+						/>
 					{:catch error}
-						<div class="w-16 h-16 bg-brand-primary/20 rounded-lg mb-4 mx-auto md:mx-0 flex items-center justify-center">
-							<span class="text-brand-primary text-lg">✓</span>
-						</div>
+						<p class="text-red-500 text-sm">Error loading animation: {error.message}</p>
 					{/await}
-				{:else}
-					<div class="w-16 h-16 bg-brand-primary/20 rounded-lg mb-4 mx-auto md:mx-0 flex items-center justify-center">
-						<span class="text-brand-primary text-lg">✓</span>
-					</div>
 				{/if}
 				<h3 class="text-xl font-semibold text-brand-primary mb-2">3. גלו את הציטוט המלא</h3>
 				<p class="text-brand-text-light opacity-80 text-sm leading-relaxed">

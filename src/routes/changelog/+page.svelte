@@ -5,21 +5,9 @@
   let html = '';
 
   async function loadMarkdown() {
-    try {
-      const res = await fetch('/changelog.he.md', { cache: 'no-cache' });
-      if (!res.ok) {
-        throw new Error(`Failed to load: ${res.status}`);
-      }
-      const text = await res.text();
-      if (text && marked && marked.parse) {
-        html = await marked.parse(text);
-      } else {
-        throw new Error('Markdown parsing failed');
-      }
-    } catch (error) {
-      console.error('Error loading markdown:', error);
-      html = '<p>שגיאה בטעינת יומן השינויים</p>';
-    }
+    const res = await fetch('/changelog.he.md', { cache: 'no-cache' });
+    const text = await res.text();
+    html = await marked.parse(text);
   }
 
   onMount(loadMarkdown);

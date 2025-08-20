@@ -19,18 +19,7 @@ const config = {
 			name: Date.now().toString()
 		},
 		// Inline ALL CSS to eliminate render-blocking
-		inlineStyleThreshold: 0, // Inline all CSS files
-		// Enhanced route splitting for better caching and tree-shaking
-		prerender: {
-			handleMissingId: 'warn',
-			handleHttpError: 'warn'
-		},
-		// Optimize client-side navigation
-		serviceWorker: {
-			register: false // We handle this manually in app.html
-		},
-		// Better route-based code splitting
-		embedded: false
+		inlineStyleThreshold: 0 // Inline all CSS files
 	}
 };
 

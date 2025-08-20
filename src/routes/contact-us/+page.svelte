@@ -33,28 +33,10 @@
 			const mailtoUrl = `mailto:support@hatzofen.com?subject=${emailSubject}&body=${emailBody}`;
 			
 			// Open email client
-			if (window && window.location) {
-				window.location.href = mailtoUrl;
-			} else {
-				throw new Error('Window object not available');
-			}
+			window.location.href = mailtoUrl;
 			
 			// Reset form after a short delay
-			if (typeof setTimeout !== 'undefined') {
-				setTimeout(() => {
-					formData = {
-						name: '',
-						email: '',
-						subject: '',
-						message: ''
-					};
-					
-					submitSuccess = true;
-					submitMessage = 'נפתח עבורך לקוח האימייל עם ההודעה מוכנה לשליחה!';
-					isSubmitting = false;
-				}, 500);
-			} else {
-				// Fallback for environments without setTimeout
+			setTimeout(() => {
 				formData = {
 					name: '',
 					email: '',
@@ -65,7 +47,7 @@
 				submitSuccess = true;
 				submitMessage = 'נפתח עבורך לקוח האימייל עם ההודעה מוכנה לשליחה!';
 				isSubmitting = false;
-			}
+			}, 500);
 			
 		} catch (error) {
 			submitSuccess = false;
