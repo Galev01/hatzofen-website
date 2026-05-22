@@ -1,14 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Nav from '$lib/components/landing/Nav.svelte';
-	import CipherCanvas from '$lib/components/landing/CipherCanvas.svelte';
 	import Hero from '$lib/components/landing/Hero.svelte';
 	import HowToPlay from '$lib/components/landing/HowToPlay.svelte';
 	import FeaturesShowcase from '$lib/components/landing/FeaturesShowcase.svelte';
 	import VisualGallery from '$lib/components/landing/VisualGallery.svelte';
 	import DiscoverSection from '$lib/components/landing/DiscoverSection.svelte';
 	import FAQ from '$lib/components/landing/FAQ.svelte';
-	import PageFooter from '$lib/components/landing/PageFooter.svelte';
 
 	// Scroll-reveal: stagger siblings, reveal once on enter.
 	onMount(() => {
@@ -44,10 +41,7 @@
 	/>
 </svelte:head>
 
-<CipherCanvas />
-<Nav />
-
-<main class="z1">
+<main>
 	<Hero />
 	<HowToPlay />
 	<FeaturesShowcase />
@@ -55,5 +49,3 @@
 	<DiscoverSection />
 	<FAQ />
 </main>
-
-<PageFooter />

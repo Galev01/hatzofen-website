@@ -15,15 +15,15 @@
 </script>
 
 <nav id="nav" class:scrolled>
-	<a href="#hero" class="nav-brand" aria-label="הצופן">
+	<a href="/" class="nav-brand" aria-label="הצופן">
 		<img src="/logos/Tzofen_logo2.webp" alt="לוגו הצופן" width="34" height="34" />
 		<span class="nav-name">הצופן</span>
 	</a>
 	<ul class="nav-links">
-		<li><a href="#what-is-it">מה זה?</a></li>
-		<li><a href="#features">תכונות</a></li>
-		<li><a href="#gallery">גלריה</a></li>
-		<li><a href="#faq">שאלות</a></li>
+		<li><a href="/#what-is-it">מה זה?</a></li>
+		<li><a href="/#features">תכונות</a></li>
+		<li><a href="/#gallery">גלריה</a></li>
+		<li><a href="/#faq">שאלות</a></li>
 	</ul>
 	<a
 		href="https://apps.apple.com/il/app/id6746350040"

@@ -1,1 +1,0 @@
-import{t as a,G as l,a as n,e as s,r as c}from"../chunks/BEqe1G8V.js";const d=!0,u=Object.freeze(Object.defineProperty({__proto__:null,prerender:d},Symbol.toStringTag,{value:"Module"}));var i=a('<div class="font-hebrew min-h-screen flex flex-col"><!></div>');function f(t,o){var e=i(),r=s(e);l(r,o,"default",{}),c(e),n(t,e)}export{f as component,u as universal};

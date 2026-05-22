@@ -54,12 +54,12 @@
 						aria-expanded={activeIndex === index}
 						on:click={() => toggle(index)}
 					>
+						<span class="faq-qtext">{item.q}</span>
 						<span class="faq-chevron">
 							<svg viewBox="0 0 11 11" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
 								<path d="M1.5 3.5l4 4 4-4" />
 							</svg>
 						</span>
-						{item.q}
 					</button>
 					<div class="faq-body">
 						<div class="faq-ans">{item.a}</div>
@@ -106,6 +106,10 @@
 		text-align: right;
 		direction: rtl;
 		transition: background 0.2s;
+	}
+	.faq-qtext {
+		flex: 1;
+		text-align: right;
 	}
 	.faq-q:hover {
 		background: var(--surface-hov);
