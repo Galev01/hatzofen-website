@@ -16,7 +16,7 @@
 
 <nav id="nav" class:scrolled>
 	<a href="/" class="nav-brand" aria-label="הצופן">
-		<img src="/logos/Tzofen_logo2.webp" alt="לוגו הצופן" width="34" height="34" />
+		<img src="/logos/new_logo.webp" alt="לוגו הצופן" width="34" height="34" />
 		<span class="nav-name">הצופן</span>
 	</a>
 	<ul class="nav-links">

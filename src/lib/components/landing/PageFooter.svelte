@@ -8,7 +8,7 @@
 
 <footer id="page-footer" class="z1" dir="rtl">
 	<div class="footer-brand">
-		<img src="/logos/Tzofen_logo2.webp" alt="הצופן" />
+		<img src="/logos/new_logo.webp" alt="הצופן" />
 		<span class="footer-brand-name">הצופן</span>
 	</div>
 	<p class="footer-tagline">פאזל קריפטוגרפי עברי ממכר</p>

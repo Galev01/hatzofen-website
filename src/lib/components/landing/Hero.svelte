@@ -53,11 +53,11 @@
 
 		<div class="hero-logo-wrap reveal">
 			<img
-				src="/logos/Tzofen_logo2.webp"
+				src="/logos/new_logo.webp"
 				alt="הצופן"
 				class="hero-logo"
 				width="320"
-				height="500"
+				height="501"
 				fetchpriority="high"
 				decoding="sync"
 			/>

@@ -30,6 +30,7 @@
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.5",
+		"sharp": "^0.34.5",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
 		"svelte-intersection-observer": "^1.0.0",
@@ -40,7 +41,7 @@
 	},
 	"dependencies": {
 		"@types/nodemailer": "^6.4.17",
-    "nodemailer": "^7.0.3",
-    "marked": "^15.0.0"
+		"marked": "^15.0.0",
+		"nodemailer": "^7.0.3"
 	}
 }
