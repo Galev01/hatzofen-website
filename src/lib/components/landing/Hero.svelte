@@ -49,8 +49,6 @@
 <section id="hero">
 	<div id="hero-cipher" bind:this={overlay} aria-hidden="true"></div>
 	<div class="hero-inner">
-		<div class="hero-tag reveal">🔐&nbsp; פאזל קריפטוגרפי עברי</div>
-
 		<div class="hero-logo-wrap reveal">
 			<img
 				src="/logos/new_logo.webp"
@@ -109,20 +107,6 @@
 		max-width: 680px;
 		position: relative;
 		z-index: 1;
-	}
-
-	.hero-tag {
-		display: inline-flex;
-		align-items: center;
-		gap: 6px;
-		padding: 0.3rem 1rem;
-		border: 1px solid var(--border);
-		border-radius: 100px;
-		font-size: 0.78rem;
-		font-weight: 600;
-		color: var(--primary);
-		background: var(--primary-dim);
-		letter-spacing: 0.04em;
 	}
 
 	.hero-logo-wrap {
