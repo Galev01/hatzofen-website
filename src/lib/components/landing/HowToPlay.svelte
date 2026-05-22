@@ -1,127 +1,104 @@
 <!-- src/lib/components/landing/HowToPlay.svelte -->
 <script lang="ts">
-	// import { LottiePlayer } from '@lottiefiles/svelte-lottie-player'; // Removed static import
-	import { browser } from '$app/environment';
-	import { onMount } from 'svelte';
-	
-	let isVisible = false;
-	let container: HTMLElement;
-
-	// Intersection Observer for lazy loading
-	onMount(() => {
-		if (!browser || !container) return;
-		
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					isVisible = true;
-					observer.disconnect();
-				}
-			});
-		}, {
-			rootMargin: '50px' // Start loading 50px before visible
-		});
-		
-		observer.observe(container);
-		
-		return () => observer.disconnect();
-	});
+	const steps = [
+		{
+			icon: '🗂️',
+			num: 1,
+			title: 'בחרו קטגוריה וחידה',
+			desc: 'מאות חידות בקטגוריות מגוונות: יהדות, ספורט, שירה, הומור ועוד.'
+		},
+		{
+			icon: '🔢',
+			num: 2,
+			title: 'פענחו את האותיות',
+			desc: 'המקלדת החכמה עוזרת להתאים אותיות למספרים ולחשוף את המילים.'
+		},
+		{
+			icon: '🏆',
+			num: 3,
+			title: 'גלו את הציטוט',
+			desc: 'פתרו את החידה, צברו מטבעות והתקדמו לאתגר הבא!'
+		}
+	];
 </script>
 
-<section id="what-is-it" class="py-12 md:py-20 bg-slate-900" bind:this={container}>
-	<div class="container mx-auto px-4">
-		<h2 class="text-3xl md:text-4xl font-bold text-center text-brand-text-light mb-10 md:mb-16">
-			מה זה הצופן? <span class="text-brand-primary">|</span> איך משחקים?
-		</h2>
-		
-		<div class="max-w-2xl mx-auto text-center mb-10 md:mb-16">
-			<p class="text-lg text-brand-text-light opacity-90 leading-relaxed">
-				"הצופן" הוא פאזל קריפטוגרפי בעברית שבו כל אות מוחלפת במספר ייחודי. המטרה שלכם היא לפענח את הציטוט המסתתר מאחורי המספרים, בעזרת היגיון, וידע בשפה העברית.
-			</p>
-		</div>
-
-		<div class="steps-graphic grid md:grid-cols-3 gap-8 md:gap-10 max-w-4xl mx-auto">
-			<!-- Step 1 -->
-			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
-				{#if browser && isVisible}
-					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
-						<LottieModule.LottiePlayer 
-							src="/lotties/Question Mark.json"
-							autoplay
-							loop
-							width="64px"
-							height="64px"
-							ariaLabel="בחרו חידה"
-							class="mb-4 mx-auto md:mx-0"
-						/>
-					{:catch error}
-						<p class="text-red-500 text-sm">Error loading animation: {error.message}</p>
-					{/await}
-				{:else}
-					<!-- Placeholder to prevent layout shift -->
-					<div class="w-16 h-16 mb-4 mx-auto md:mx-0 bg-brand-primary/10 rounded-lg flex items-center justify-center">
-						<div class="w-6 h-6 border-2 border-brand-primary/30 border-t-brand-primary rounded-full animate-spin"></div>
-					</div>
-				{/if}
-				<h3 class="text-xl font-semibold text-brand-primary mb-2">1. בחרו קטגוריה וחידה</h3>
-				<p class="text-brand-text-light opacity-80 text-sm leading-relaxed">
-					בחרו מתוך מאות חידות בקטגוריות מגוונות כמו יהדות, ספורט, שירה עברית ועוד...
-				</p>
-			</div>
-			<!-- Step 2 -->
-			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
-				{#if browser && isVisible}
-					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
-						<LottieModule.LottiePlayer 
-							src="/lotties/Binary.json"
-							autoplay
-							loop
-							width="64px"
-							height="64px"
-							ariaLabel="פענחו אותיות"
-							class="mb-4 mx-auto md:mx-0"
-						/>
-					{:catch error}
-						<p class="text-red-500 text-sm">Error loading animation: {error.message}</p>
-					{/await}
-				{:else}
-					<!-- Placeholder to prevent layout shift -->
-					<div class="w-16 h-16 mb-4 mx-auto md:mx-0 bg-brand-primary/10 rounded-lg flex items-center justify-center">
-						<div class="w-6 h-6 border-2 border-brand-primary/30 border-t-brand-primary rounded-full animate-spin"></div>
-					</div>
-				{/if}
-				<h3 class="text-xl font-semibold text-brand-primary mb-2">2. פענחו את האותיות</h3>
-				<p class="text-brand-text-light opacity-80 text-sm leading-relaxed">
-					השתמשו במקלדת החכמה כדי להתאים אותיות למספרים ולחשוף את המילים.
-				</p>
-			</div>
-			<!-- Step 3 -->
-			<div class="step bg-slate-800 p-6 rounded-lg shadow-lg text-center md:text-right border border-brand-primary/50 flex flex-col items-center md:items-start">
-				{#if browser && isVisible}
-					{#await import('@lottiefiles/svelte-lottie-player') then LottieModule}
-						<LottieModule.LottiePlayer 
-							src="/lotties/Puzzle-Solving Teamwork.json"
-							autoplay
-							loop
-							width="64px"
-							height="64px"
-							ariaLabel="גלו ציטוט"
-							class="mb-4 mx-auto md:mx-0"
-						/>
-					{:catch error}
-						<p class="text-red-500 text-sm">Error loading animation: {error.message}</p>
-					{/await}
-				{:else}
-					<!-- Placeholder to prevent layout shift -->
-					<div class="w-16 h-16 mb-4 mx-auto md:mx-0 bg-brand-primary/10 rounded-lg flex items-center justify-center">
-						<div class="w-6 h-6 border-2 border-brand-primary/30 border-t-brand-primary rounded-full animate-spin"></div>
-					</div>
-				{/if}
-				<h3 class="text-xl font-semibold text-brand-primary mb-2">3. גלו את הציטוט המלא</h3>
-				<p class="text-brand-text-light opacity-80 text-sm leading-relaxed">
-					פתרו את החידה במלואה, צברו מטבעות והתקדמו לאתגר הבא!
-				</p>
-			</div>
+<section id="what-is-it" class="sec sec-alt z1">
+	<div class="l-container">
+		<h2 class="sec-title reveal">מה זה <span class="hi">הצופן</span>?</h2>
+		<p class="sec-sub reveal">
+			פאזל קריפטוגרפי שבו כל אות מוחלפת במספר ייחודי — פענחו את הציטוט המוסתר ברמה שלכם.
+		</p>
+		<div class="steps-grid">
+			{#each steps as step}
+				<div class="step-card reveal">
+					<div class="step-icon">{step.icon}</div>
+					<div class="step-num">{step.num}</div>
+					<div class="step-title">{step.title}</div>
+					<p class="step-desc">{step.desc}</p>
+				</div>
+			{/each}
 		</div>
 	</div>
-</section> 
+</section>
+
+<style>
+	.steps-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 1.25rem;
+	}
+
+	.step-card {
+		background: var(--bg-alt);
+		border: 1px solid rgba(139, 116, 245, 0.12);
+		border-radius: var(--r);
+		padding: 2rem 1.75rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 1rem;
+		transition: border-color 0.3s, transform 0.3s, background 0.3s;
+		cursor: default;
+	}
+	.step-card:hover {
+		border-color: var(--border-hov);
+		transform: translateY(-5px);
+		background: rgba(139, 116, 245, 0.06);
+	}
+
+	.step-num {
+		width: 54px;
+		height: 54px;
+		border-radius: 50%;
+		background: var(--primary-dim);
+		border: 2px solid var(--primary);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: 900;
+		color: var(--primary);
+	}
+
+	.step-icon {
+		font-size: 2.2rem;
+		line-height: 1;
+	}
+	.step-title {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--text);
+	}
+	.step-desc {
+		font-size: 0.88rem;
+		color: var(--muted);
+		line-height: 1.65;
+	}
+
+	@media (max-width: 500px) {
+		.steps-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

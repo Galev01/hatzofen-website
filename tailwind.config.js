@@ -5,15 +5,17 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'brand-background': '#1A1F2C',
-				'brand-primary': '#9b87f5',
+				'brand-background': '#0e0d1c',
+				'brand-bg-alt': '#161527',
+				'brand-primary': '#8b74f5',
 				'brand-accent': '#FDE1D3',
-				'brand-text-light': '#F0F0F0',
+				'brand-text-light': '#f0eeff',
 			},
 			fontFamily: {
 				// Add a Hebrew font like Assistant, Alef, or use a good system stack
 				// Ensure the font is available in your project (e.g., via Google Fonts import or local files)
 				hebrew: [
+					'Heebo', // Primary Hebrew font (design system)
 					'Assistant', // Example Hebrew font
 					'-apple-system',
 					'BlinkMacSystemFont',
