@@ -1,93 +1,156 @@
+<!-- src/lib/components/landing/FAQ.svelte -->
 <script lang="ts">
 	let activeIndex: number | null = null;
 
 	const faqItems = [
 		{
-			question: "איך משחקים בצופן?",
-			answer: "בכל רמה תקבלו ציטוט מוצפן עם אותיות מעורבבות. המטרה שלכם היא לפענח את הציטוט על ידי החלפת האותיות במקומות הנכונים. השתמשו ברמזים ובהיגיון כדי לגלות את המשפט המקורי."
+			q: 'איך משחקים בצופן?',
+			a: 'בכל רמה תקבלו ציטוט מוצפן עם מספרים במקום אותיות. המטרה היא לפענח ולגלות את הציטוט המקורי.'
 		},
 		{
-			question: "כמה רמות יש במשחק?",
-			answer: "המשחק כולל מאות רמות מאתגרות, החל מרמות קלות למתחילים ועד לרמות מורכבות למומחים. אני מוסיף רמות חדשות באופן קבוע כדי לשמור על האתגר."
+			q: 'כמה רמות יש במשחק?',
+			a: 'המשחק כולל מאות רמות מקל למתקדם. תכנים חדשים מתווספים באופן קבוע.'
 		},
 		{
-			question: "מה סוגי הציטוטים במשחק?",
-			answer: "המשחק כולל ציטוטים מגוונים: פסוקים מהתנ\"ך, אמרות חז\"ל, ביטויים עממיים, שירים עבריים קלסיים, ואמרות של הוגי דעות ישראליים."
+			q: 'מה סוגי הציטוטים?',
+			a: 'פסוקים מהתנ"ך, אמרות חז"ל, ביטויים עממיים, שירים עבריים קלסיים ואמרות של הוגי דעות ישראליים.'
 		},
 		{
-			question: "האם המשחק מתאים לכל הגילאים?",
-			answer: "בהחלט! המשחק מתאים לכל בני המשפחה החל מגיל 10 ומעלה. הרמות הקלות מתאימות לילדים ובני נוער, בעוד שהרמות המתקדמות יאתגרו גם מבוגרים ואוהבי תרבות עברית."
+			q: 'האם המשחק מתאים לכל הגילאים?',
+			a: 'בהחלט! מתאים מגיל 10 לכל המשפחה. הרמות הקלות לילדים ובני נוער, הקשות לאוהבי אתגרים.'
 		},
 		{
-			question: "האם יש רמזים במשחק?",
-			answer: "כן! כל רמה כוללת מערכת רמזים מתקדמת: רמז על נושא הציטוט, חשיפת אות בודדת, או חשיפת מילה שלמה. הרמזים עוזרים לכם להתקדם גם ברמות הקשות ביותר."
+			q: 'האם יש רמזים?',
+			a: 'כן! רמז על נושא הציטוט, חשיפת אות בודדת, או חשיפת מילה שלמה — לכם לבחור.'
 		},
 		{
-			question: "האם המשחק זמין בחינם?",
-			answer: "המשחק זמין להורדה בחינם עם מבחר רמות ללא תשלום."
-		},
-        {
-			question: "המשחק נתקע או לא עובד טוב, מה עושים?",
-			answer: "אני כאן כדי לפתור לכם את הבעיות, אני מפתח יחיד ולא תמיד יש לי זמן לטפל בהכל, אבל כל מה שתכתבו לי נרשם, ואני לוקח אותו איתי לפיתוח כמה שיותר מהר, באגים רציניים ובעיות יקבלו עדיפות עליונה"
+			q: 'האם המשחק חינמי?',
+			a: 'המשחק זמין להורדה חינמית עם מבחר רמות ללא תשלום.'
 		},
 		{
-			question: "איך אפשר לקבל עזרה או לדווח על בעיה?",
-			answer: "אנחנו כאן לעזור! ניתן ליצור קשר איתנו דרך דף 'צור קשר' באתר, לשלוח אימייל ישירות, או לפנות אלינו ברשתות החברתיות. אנחנו מקפידים לענות במהירות לכל פניה."
+			q: 'המשחק לא עובד, מה עושים?',
+			a: 'אני מפתח יחיד ואני לוקח כל בעיה ברצינות. באגים רציניים מקבלים עדיפות עליונה — כתבו לי!'
+		},
+		{
+			q: 'איך יוצרים קשר?',
+			a: "דרך דף 'צור קשר' באתר, אימייל ישיר, או ברשתות החברתיות. עונה לכל פנייה בהקדם."
 		}
 	];
 
-	function toggleFAQ(index: number) {
+	function toggle(index: number) {
 		activeIndex = activeIndex === index ? null : index;
 	}
 </script>
 
-<section class="py-16 bg-gradient-to-b from-background to-background/95">
-	<div class="container mx-auto px-4 max-w-4xl">
-		<div class="text-center mb-12">
-			<h2 class="text-3xl md:text-4xl font-bold text-text-light mb-4">
-				שאלות נפוצות
-			</h2>
-			<p class="text-lg text-text-light/80 max-w-2xl mx-auto">
-				מצאו תשובות לשאלות הנפוצות ביותר על המשחק
-			</p>
-		</div>
-
-		<div class="space-y-4">
+<section id="faq" class="sec sec-alt z1">
+	<div class="l-container">
+		<h2 class="sec-title reveal">שאלות <span class="hi">נפוצות</span></h2>
+		<p class="sec-sub reveal">מצאו תשובות לכל מה שרציתם לדעת</p>
+		<div class="faq-wrap">
 			{#each faqItems as item, index}
-				<div class="bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 overflow-hidden transition-all duration-300 hover:bg-white/10">
+				<div class="faq-item reveal" class:open={activeIndex === index}>
 					<button
-						class="w-full px-6 py-4 text-right flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-200"
-						on:click={() => toggleFAQ(index)}
+						class="faq-q"
 						aria-expanded={activeIndex === index}
+						on:click={() => toggle(index)}
 					>
-						<div class="flex items-center">
-							<svg
-								class="w-5 h-5 text-primary transition-transform duration-300 {activeIndex === index ? 'rotate-180' : ''}"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						<span class="faq-chevron">
+							<svg viewBox="0 0 11 11" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
+								<path d="M1.5 3.5l4 4 4-4" />
 							</svg>
-						</div>
-						<h3 class="text-lg font-semibold text-text-light text-right flex-1 mr-4">
-							{item.question}
-						</h3>
+						</span>
+						{item.q}
 					</button>
-					
-					<div
-						class="overflow-hidden transition-all duration-300 ease-in-out {activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}"
-					>
-						<div class="px-6 pb-4 pt-2">
-							<div class="border-t border-white/10 pt-4">
-								<p class="text-text-light/90 leading-relaxed text-right">
-									{item.answer}
-								</p>
-							</div>
-						</div>
+					<div class="faq-body">
+						<div class="faq-ans">{item.a}</div>
 					</div>
 				</div>
 			{/each}
 		</div>
 	</div>
-</section> 
+</section>
+
+<style>
+	.faq-wrap {
+		max-width: 780px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 0.65rem;
+	}
+
+	.faq-item {
+		border: 1px solid var(--border);
+		border-radius: var(--r-sm);
+		overflow: hidden;
+		transition: border-color 0.25s;
+	}
+	.faq-item.open {
+		border-color: var(--primary);
+	}
+
+	.faq-q {
+		width: 100%;
+		background: var(--surface);
+		border: none;
+		cursor: pointer;
+		padding: 1.05rem 1.4rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		color: var(--text);
+		font-family: var(--font);
+		font-size: 0.97rem;
+		font-weight: 600;
+		text-align: right;
+		direction: rtl;
+		transition: background 0.2s;
+	}
+	.faq-q:hover {
+		background: var(--surface-hov);
+	}
+
+	.faq-chevron {
+		flex-shrink: 0;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		border: 1.5px solid var(--border);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.3s, border-color 0.25s;
+	}
+	.faq-item.open .faq-chevron {
+		transform: rotate(180deg);
+		border-color: var(--primary);
+	}
+	.faq-chevron svg {
+		width: 11px;
+		height: 11px;
+		stroke: var(--muted);
+		fill: none;
+	}
+	.faq-item.open .faq-chevron svg {
+		stroke: var(--primary);
+	}
+
+	.faq-body {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	.faq-item.open .faq-body {
+		max-height: 320px;
+	}
+
+	.faq-ans {
+		padding: 0 1.4rem 1.2rem;
+		border-top: 1px solid var(--border);
+		padding-top: 0.9rem;
+		font-size: 0.88rem;
+		color: var(--muted);
+		line-height: 1.7;
+	}
+</style>

@@ -14,6 +14,7 @@ export default {
 				// Add a Hebrew font like Assistant, Alef, or use a good system stack
 				// Ensure the font is available in your project (e.g., via Google Fonts import or local files)
 				hebrew: [
+					'Heebo', // Primary Hebrew font (design system)
 					'Assistant', // Example Hebrew font
 					'-apple-system',
 					'BlinkMacSystemFont',
